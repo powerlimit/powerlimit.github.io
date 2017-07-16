@@ -262,7 +262,7 @@
                     waitForLayers: true,
                     thumbnailPointer: false,
                     touchSwipe: false,
-                    autoplay: true,
+                    autoplay: false,
                     autoScaleLayers: false,
                     captionFadeDuration: 100
 
