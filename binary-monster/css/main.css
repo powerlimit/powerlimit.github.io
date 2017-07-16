@@ -276,7 +276,7 @@ body.fixed-header .scrolling-header .navbar .wrap-inside-nav { /*top: 64px;*/ }
 /******************************/
 /**** AREAS SECTION ****/
 /******************************/
-.areas-section { padding: 150px 0 80px; }
+.areas-section { padding: 100px 0 80px; }
 .areas-section.service-areas-section { padding-top: 40px; }
 .areas-section .above-title {font-size: 18px;color: #666666;text-transform: uppercase;font-family: 'Open Sans', sans-serif;font-weight: 300;}
 .areas-section h4 {font-family: 'open sans', sans-serif;color: #333333;margin-top: 10px;font-weight: 400;font-size: 32px;text-transform: uppercase;margin-bottom: 15px;}
@@ -646,7 +646,7 @@ body.fixed-header .scrolling-header .navbar .wrap-inside-nav { /*top: 64px;*/ }
 .service-item p { margin-bottom: 15px; }
 
 /******  PLANS ITEM ******/
-.plan-item {background: #fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;border: 1px solid #eeeeee;}
+.plan-item {position: relative; transition: .3s all ease; background: #fff;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;border: 1px solid #eeeeee;}
 .plan-item.active {border: none;border-top: 5px solid #00d037;position: relative;z-index: 3;margin: -15px;padding-bottom: 15px;-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);-moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);}
 .plan-item.active .item-heading { padding-top: 54px; margin-bottom: 3px; }
 .plan-item.active .item-body {border-top: 1px solid #e7e8ec;}
@@ -1013,4 +1013,31 @@ body.fixed-header .scrolling-header .navbar .wrap-inside-nav { /*top: 64px;*/ }
 }
 .btn{
   border-radius: 30px;
+}
+.achievements-section .fa{
+  color: #fff;
+}
+.price-section .plan-item{
+  overflow: hidden;
+}
+.price-section .plan-text{
+  padding: 0px;
+  font-size: 18px;
+}
+.price-section .plan-text p{
+  margin: 10px 0px;
+  font-size: 18px;
+}
+.price-section .plan-text p strong, .price-section .plan-text p strong i{
+  font-size: 18px;
+}
+.price-section .plan-text p.w-deposit{
+  margin: 0;
+  padding: 20px 0;
+  background-color: #00d037;
+  color: #fff;
+  font-size: 22px;
+}
+.asdasd{
+  margin-right: 85px;
 }
