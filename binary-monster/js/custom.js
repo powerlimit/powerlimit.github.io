@@ -13,8 +13,6 @@
         build: function () {
             // Dropdown menu
             this.cotentslide();
-            // Owl carousel init
-            this.initOwlCarousel();
             // Stick slider init
             this.initStickSlider();
             // Fixed header 
@@ -130,7 +128,7 @@
 
             $(".enable-owl-carousel").each(function (i) {
                 var $owl = $(this);
-                var navigationData = $owl.data('navigation');
+                
                 var paginationData = $owl.data('pagination');
                 var singleItemData = $owl.data('single-item');
                 var autoPlayData = $owl.data('auto-play');
@@ -142,13 +140,13 @@
                 var min800 = $owl.data('min800');
                 var min1200 = $owl.data('min1200');
                 $owl.owlCarousel({
-                    navigation: navigationData,
+                    
                     pagination: paginationData,
                     singleItem: singleItemData,
                     autoPlay: autoPlayData,
                     transitionStyle: transitionStyleData,
                     stopOnHover: stopOnHoverData,
-                    navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+                   
                     itemsCustom: [
                         [0, 1],
                         [600, min600],
@@ -274,5 +272,45 @@
     Core.initialize();
 
 
-    
+    function wModal(windowID, openButton){
+            function modalOpen(){
+                if($('.window-wrapper').hasClass('bounceOutRight')){
+                    $('.window-wrapper').removeClass('bounceOutRight');
+                }
+                $(windowID).fadeIn();
+                $('.window-wrapper').addClass('bounceInLeft').css({'position':'relative','left':'auto'});
+            };
+            function modalClose(){
+                $('.window-wrapper').addClass('bounceOutRight');
+                setTimeout(function(){
+                    $(windowID).fadeOut();
+                },200);
+            }
+            $(openButton).click(modalOpen);
+            $('.close-window').click(modalClose);
+            $('.button-port').click(modalClose);
+        };
+        
+        var modalDivs = document.querySelectorAll('div[id^=wPop]'),
+            modalOpens= document.querySelectorAll('span[id^=openWPop]');
+        
+        for (var i = 0; i < modalDivs.length; i++) {
+            wModal('#'+$(modalDivs[i]).attr('id'), '#'+$(modalOpens[i]).attr('id'));
+        };
+        $('a.prevent').click(function(e){
+            e.preventDefault();
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
 })();
