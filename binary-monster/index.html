@@ -38,7 +38,7 @@
 		</head>
 		<body data-scrolling-animations="true" onload="select(1);">
 		<a id="top"></a>
-				<header class="header scrolling-header">
+				<header class="header scrolling-header dark">
 						<nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
 								<div class="container relative-nav-container">
 										
@@ -63,7 +63,7 @@
 																<a href="#work">Как с нами зарабатывать?</a>
 														</li>
 														<li class="">
-																<a href="#"> Лучшие брокеры</a>
+																<a class="prevent" href="#"><span id="openWPop-1">Лучшие брокеры</span></a>
 														</li>
 														<li class="" ><a href="#about"> О нас</a></li>
 							<li style="" class="">
@@ -84,21 +84,18 @@
 								<div class="wrap-section-slider" id="topSlider">
 										<div class="sp-slides">
 					
-					<div class="slide-item sp-slide">
-														<!-- <div class="slide-image">
-																<img src="img/binary.jpg"  alt="" />
-														</div> -->
-														<video autoplay loop>
+					<div class="slide-item sp-slide mydark">
+														
+														<video autoplay='autoplay' loop='loop'>
 															<source src="1.mp4" type="video/mp4">
-															
 														</video>
-														<div class="slide-content ">
+														<div class="slide-content">
 																<p class="top-title sp-layer"  data-show-transition="left" data-hide-transition="up" data-show-delay="400" data-hide-delay="100" >МЫ ГРАБИМ ПЛОХИХ БРОКЕРОВ</p>
 																<div class="title sp-layer" data-show-transition="right" data-hide-transition="up" data-show-delay="500" data-hide-delay="150">ЗАРАБАТЫВАЙ С НАМИ ДО 350 % В МЕСЯЦ</div>
 																<div class="under-title sp-layer" data-show-transition="up" data-hide-transition="up" data-show-delay="600" data-hide-delay="200">Только мы приведем вас к успеху!</div>
 																<div class="controls sp-layer" data-show-transition="up" data-hide-transition="up" data-show-delay="800" data-hide-delay="250">
 																	 
-									 <a href="#" class="btn btn-primary"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Начать рубить бабло</a>                                     <a href="#work" class="btn btn-info"><i class="fa fa-file-text-o" aria-hidden="true"></i> &nbsp;&nbsp;Узнайте больше&nbsp;&nbsp;</a>
+									 <a href="#" class="btn btn-primary"><i class="fa fa-line-chart" aria-hidden="true"></i> Начать рубить бабло</a>                                     <a href="#work" class="btn btn-info"><i class="fa fa-file-text-o" aria-hidden="true"></i> &nbsp;&nbsp;Узнайте больше&nbsp;&nbsp;</a>
 									
 									<a href="" data-toggle="modal" data-target=".modal3" class="btn btn-info"><i class="fa fa-calculator" aria-hidden="true"></i> &nbsp;&nbsp;Калькулятор&nbsp;&nbsp;</a>
 																</div>
@@ -404,7 +401,7 @@ $('#btn-group label').click(function() {
 						<div class="dark-content">
 								<div class="container">
 										<div class="section-heading">
-												<div class="section-title">Наши тарифные планы:</div>
+												<div class="section-title">Тарифные планы:</div>
 												<div class="section-subtitle">Все депозиты приносят вам стабильную прибыль – до 350% в месяц от суммы депозита</div>
 												<div class="design-arrow"></div>
 										</div>
@@ -488,7 +485,12 @@ $('#btn-group label').click(function() {
                                     </div>
                                     <p>Введите сумму инвестиции:</p>
                                     <div class="my-group">
-                                        <input class="form-control" id="size" oninput="calculate();" type="range" min="1000" max="1000000" step="1000" value="10000">
+                                        <div class="rows">
+                                        	<input class="form-control" id="size" oninput="calculate();" type="range" min="100" max="1000000" step="1000" value="10000">
+                                        	<!-- <div class="r-wrap">
+                                        		<span class="w-row">1</span><span class="w-row">2</span><span class="w-row">3</span><span class="w-row">4</span><span class="w-row">5</span><span class="w-row">6</span><span class="w-row">7</span><span class="w-row">8</span><span class="w-row">9</span><span class="w-row">0</span>
+                                        	</div> -->
+                                        </div>
                                         <p class="calc-summ"><span id="current" class="w-number"></span> <i class="fa fa-rub"></i></p>
                                     </div>
                                     <p>Через <span id="descr"></span> Ваш депозит составит <span id="result" class="w-number"></span> <i class="fa fa-rub"></i></p>
@@ -519,7 +521,7 @@ $('#btn-group label').click(function() {
 													<h5>Связаться с нами</h5>
 													<ul class="footer-nav"> 
 														<li><a href="mailto: support@binary-monster.com"><i class="fa fa-envelope"></i> support@binary-monster.com</a></li>
-														<li><a class="prevent" href=""><span id="openWPop-1"><i class="fa fa-file-text"></i>Политика конфиденциальности</span></a></li>
+														<li><a class="prevent" href=""><span id="openWPop-2"><i class="fa fa-file-text"></i>Политика конфиденциальности</span></a></li>
 													</ul>
 												</div>
 												<div class="col-md-4 col-sm-4 ">
@@ -534,8 +536,66 @@ $('#btn-group label').click(function() {
 						</section>
 				</footer>
 
-					
-				<div id="wPop-1" class="box-hide portfolio-popup">
+					<div id="wPop-1" class="box-hide portfolio-popup">
+					<div class="fon-black animated">
+						<div class="window-wrapper animated ">
+							<div class="close-window">
+								<i class="fa fa-close"></i>
+							</div>
+							<div class="w-pop-cont w-table">
+								<div class="table-brok">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>№</th>
+												<th>Брокер</th>
+												<th>Бонус</th>
+												<th>Мин. депозит</th>
+												<th>Мин. ставка</th>
+												<th>Ссылка</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td><img src="img/001brok.png" alt=""> </td>
+												<td>100%</td>
+												<td>$10</td>
+												<td>$1</td>
+												<td><a href="https://olymptrade.com/l/LPL47-02/affiliate?affiliate_id=26361&subid1=&subid2=" class=" btn-inf">Перейти на сайт</a></td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td><img src="img/002brok.png" alt=""> </td>
+												<td>60%</td>
+												<td>$10</td>
+												<td>$1</td>
+												<td><a href="https://binomo.com?a=afba61380d9a" class=" btn-inf">Перейти на сайт</a></td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td><img src="img/003brok.png" alt=""> </td>
+												<td>60%</td>
+												<td>$10</td>
+												<td>$1</td>
+												<td><a href="http://affiliate.iqoption.com/redir/?aff=22455" class=" btn-inf">Перейти на сайт</a></td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td><img src="img/004brok.png" alt=""> </td>
+												<td>50%</td>
+												<td>$10</td>
+												<td>$1</td>
+												<td><a href="https://ru.expertoption.com/?refid=11226" class=" btn-inf">Перейти на сайт</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="wPop-2" class="box-hide portfolio-popup">
 					<div class="fon-black animated">
 						<div class="window-wrapper animated ">
 							<div class="close-window">
@@ -732,16 +792,9 @@ $('#btn-group label').click(function() {
 						</div>
 					</div>
 				</div>
-				<div id="wPop-2" class="box-hide portfolio-popup">
-					<div class="fon-black animated">
-						<div class="window-wrapper animated ">
-							<div class="close-window">
-								<i class="fa fa-close"></i>
-							</div>
-							
-						</div>
-					</div>
-				</div>
+
+
+				
 
 				<!-- components -->
 				<script src="vendor/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
