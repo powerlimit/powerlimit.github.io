@@ -300,6 +300,9 @@
         $('a.prevent').click(function(e){
             e.preventDefault();
         });
+        $('#brok').click(function(){
+            wModal('#wPop-1', '#brok');
+        });
 
 
 
