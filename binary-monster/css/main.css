@@ -1047,7 +1047,10 @@ body.fixed-header .scrolling-header .navbar .wrap-inside-nav { /*top: 64px;*/ }
 
 
 
-
+.vcenter{
+    margin-top: 10px;
+    width: 90%;
+  }
 .calc-summ{
   white-space: nowrap;
   margin: 0 0 0 10px;
