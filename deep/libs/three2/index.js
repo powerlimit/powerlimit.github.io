@@ -8,7 +8,7 @@ Date: 08/14/2014
 
 */
 
-var SEPARATION = 40, AMOUNTX = 70, AMOUNTY = 35;
+var SEPARATION = 100, AMOUNTX = 40, AMOUNTY = 30;
 
 var container;
 var camera, scene, renderer;
@@ -39,8 +39,8 @@ function init() {
 	}
 
 	camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, 1, 10000 );
-	camera.position.y = 150; //changes how far back you can see i.e the particles towards horizon
-	camera.position.z = 100; //This is how close or far the particles are seen
+	camera.position.y = 280; //changes how far back you can see i.e the particles towards horizon
+	camera.position.z = 110; //This is how close or far the particles are seen
 	
 	camera.rotation.x = 0.35;
 	
@@ -79,7 +79,7 @@ function init() {
 
 	renderer = new THREE.CanvasRenderer();
 	renderer.setSize( window.innerWidth, window.innerHeight );
-	renderer.setClearColor( 0x190234, 0);
+	renderer.setClearColor( 0x190234, 1);
 	container.appendChild( renderer.domElement );
 
 	window.addEventListener( 'resize', onWindowResize, false );

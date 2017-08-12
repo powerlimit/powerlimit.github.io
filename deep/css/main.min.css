@@ -1022,7 +1022,6 @@ h1 {
   transition: color 0.3s ease-in-out; }
 
 .st-accordion ul li > a span {
-  background: url(../images/down.png) no-repeat;
   width: 26px;
   height: 14px;
   position: absolute;

@@ -16,12 +16,12 @@ $('#st-accordion').accordion({
 	});
 
 
-
+ 
 
 
 	
 
-	var myNav = $('nav.my-menu');  
+	var myNav = $('nav.my-menu'); 
 	
 
 	$(".menu--link").click(function (event) {			//Плавный скролл
