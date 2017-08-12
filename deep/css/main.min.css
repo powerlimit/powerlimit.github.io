@@ -1018,21 +1018,20 @@ h1 {
   position: relative;
   line-height: 100px;
   outline: none;
-  -webkit-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out; }
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out; }
 
 .st-accordion ul li > a span {
-  background: transparent url("../../../img/down.png") no-repeat center center;
-  text-indent: -9000px;
+  background: url(../images/down.png) no-repeat;
   width: 26px;
   height: 14px;
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 10px;
   margin-top: -7px;
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 .st-accordion ul li > a:hover {
   color: #1693eb; }
@@ -1049,6 +1048,7 @@ h1 {
   -ms-transform: rotate(180deg);
       transform: rotate(180deg);
   right: 10px;
+  top: 120px;
   opacity: 1; }
 
 .st-content {
@@ -4584,10 +4584,8 @@ header {
   background: linear-gradient(to bottom, #120118 0%, #1a0234 50%, #01101f 100%); }
 
 canvas {
-  height: 60vh !important;
-  margin-top: 40vh;
   position: absolute;
-  background: transparent;
+  background: transparent !important;
   overflow: hidden;
   z-index: 1; }
 

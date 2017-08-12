@@ -79,7 +79,7 @@ function init() {
 
 	renderer = new THREE.CanvasRenderer();
 	renderer.setSize( window.innerWidth, window.innerHeight );
-	renderer.setClearColor( 0xffffff, 0);
+	renderer.setClearColor( 0x190234, 0);
 	container.appendChild( renderer.domElement );
 
 	window.addEventListener( 'resize', onWindowResize, false );

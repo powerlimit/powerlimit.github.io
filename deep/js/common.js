@@ -11,15 +11,15 @@ $(function() {
 
 
 
-
-
-
-
-
-
-	$('#st-accordion').accordion({
-		//oneOpenedItem	: true
+$('#st-accordion').accordion({
+		oneOpenedItem	: true
 	});
+
+
+
+
+
+	
 
 	var myNav = $('nav.my-menu');  
 	
@@ -108,15 +108,7 @@ $(function() {
    
 
 
-/*$(window).scroll(function() {
-    $('.mov').each(function(){
-      var imagePos = $(this).offset().top;
-      var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow+200) {
-        $(this).addClass('wobble');
-      }
-    });
-  });*/
+
 
 
 });
