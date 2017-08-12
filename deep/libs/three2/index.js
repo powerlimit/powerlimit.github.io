@@ -8,7 +8,7 @@ Date: 08/14/2014
 
 */
 
-var SEPARATION = 100, AMOUNTX = 40, AMOUNTY = 30;
+var SEPARATION = 150, AMOUNTX = 40, AMOUNTY = 20;
 
 var container;
 var camera, scene, renderer;
