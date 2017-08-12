@@ -4465,19 +4465,19 @@ h1 {
           animation-name: slideOutUp; }
 
 *::-webkit-input-placeholder {
-  color: #666;
+  color: #999;
   opacity: 1; }
 
 *:-moz-placeholder {
-  color: #666;
+  color: #999;
   opacity: 1; }
 
 *::-moz-placeholder {
-  color: #666;
+  color: #999;
   opacity: 1; }
 
 *:-ms-input-placeholder {
-  color: #666;
+  color: #999;
   opacity: 1; }
 
 * {
@@ -4486,11 +4486,11 @@ h1 {
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-  color: #666; }
+  color: #999; }
 
 body input:required:valid,
 body textarea:required:valid {
-  color: #666; }
+  color: #999; }
 
 html {
   font-size: 10px; }
@@ -4543,7 +4543,7 @@ a.button {
     text-decoration: none; }
 
 .section {
-  padding: 120px 0; }
+  padding: 90px 0; }
   .section h2 {
     text-transform: uppercase;
     font-family: 'roboto-black';
@@ -4573,6 +4573,9 @@ a.button {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center; }
+
+.first-screen {
+  display: none !important; }
 
 header {
   height: 100vh;
@@ -4957,10 +4960,10 @@ a.logo img {
 #roadmap {
   background: url("../img/road-bg.png") no-repeat center 95%; }
   #roadmap .roadmap-container {
-    width: -webkit-calc(100%/12*8);
-    width: calc(100%/12*8);
-    margin-left: -webkit-calc(100%/12*2);
-    margin-left: calc(100%/12*2); }
+    width: -webkit-calc(100%/12*10);
+    width: calc(100%/12*10);
+    margin-left: -webkit-calc(100%/12);
+    margin-left: calc(100%/12); }
     #roadmap .roadmap-container .roadmap-element {
       width: -webkit-calc(50% + 15px);
       width: calc(50% + 15px);
@@ -5001,7 +5004,8 @@ a.logo img {
           left: 50px;
           -webkit-transform: rotate(-25deg);
               -ms-transform: rotate(-25deg);
-                  transform: rotate(-25deg); }
+                  transform: rotate(-25deg);
+          opacity: .5; }
       #roadmap .roadmap-container .roadmap-element.roadmap-left-element:after {
         content: '';
         height: 2px;
@@ -5012,7 +5016,8 @@ a.logo img {
         right: 50px;
         -webkit-transform: rotate(25deg);
             -ms-transform: rotate(25deg);
-                transform: rotate(25deg); }
+                transform: rotate(25deg);
+        opacity: .5; }
       #roadmap .roadmap-container .roadmap-element p {
         margin: 0;
         font-size: 14px;
