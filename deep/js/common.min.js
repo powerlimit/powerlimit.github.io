@@ -1,11 +1,17 @@
 $(function() {
 	
-
+	new WOW().init();
+	
 	
 	/*var navs = $('.main-menu-link');
 	$('.tracked').waypoint(function(){
-		$(this).addClass('active-link')
-	})*/
+		$(this).addClass('active-link');
+		alert($(this).attr('id'));
+	});*/
+
+
+
+
 
 
 
@@ -17,12 +23,6 @@ $(function() {
 
 	var myNav = $('nav.my-menu');  
 	
-
-
-
-
-
-
 
 	$(".menu--link").click(function (event) {			//Плавный скролл
         event.preventDefault();
@@ -107,4 +107,17 @@ $(function() {
 	onScroll();
    
 
+
+/*$(window).scroll(function() {
+    $('.mov').each(function(){
+      var imagePos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+200) {
+        $(this).addClass('wobble');
+      }
+    });
+  });*/
+
+
 });
+

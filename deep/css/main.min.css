@@ -4578,7 +4578,7 @@ a.button {
   display: none !important; }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#120118), color-stop(50%, #1a0234), to(#01101f));
   background: -webkit-linear-gradient(top, #120118 0%, #1a0234 50%, #01101f 100%);
   background: linear-gradient(to bottom, #120118 0%, #1a0234 50%, #01101f 100%); }
@@ -4671,7 +4671,7 @@ a.logo img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -4740,7 +4740,7 @@ a.logo img {
   .form-row span {
     display: inline-block;
     height: 40px;
-    width: 80px;
+    width: 70px;
     background-color: #FFF;
     color: #1a1a1a;
     font-size: 14px;
@@ -4774,9 +4774,9 @@ a.logo img {
     padding: 10px; }
     .form-row input.get-token {
       text-align: right;
-      width: 190px;
       padding-right: 40px;
-      background: #fff url("../img/token-logo.png") no-repeat 92% center; }
+      background: #fff url("../img/token-logo.png") no-repeat 95% center;
+      background-size: 10%; }
     .form-row input.get-eth {
       text-align: left; }
 
@@ -4825,6 +4825,12 @@ a.logo img {
     margin: 25px;
     width: -webkit-calc(100%/2 - 150px);
     width: calc(100%/2 - 150px); }
+  .flex-2-elem .flex-elem.team-elem {
+    width: 300px;
+    margin: 25px 40px; }
+    .flex-2-elem .flex-elem.team-elem img {
+      display: block;
+      width: 100%; }
 
 .flex-4-elem .flex-elem {
   width: -webkit-calc(100%/4 - 30px);
@@ -4855,7 +4861,6 @@ a.logo img {
   background-image: url("../img/wel-bg.png"); }
 
 .section-with-bg {
-  min-height: 100vh;
   background-size: cover; }
 
 .opa05 {
@@ -5099,7 +5104,8 @@ a.logo img {
       margin: 0 50px; }
       #socials .soc-wrap .soc-link img {
         -webkit-transition: 1s ease all;
-        transition: 1s ease all; }
+        transition: 1s ease all;
+        height: 50px; }
       #socials .soc-wrap .soc-link:hover img {
         -webkit-transform: rotateY(360deg);
                 transform: rotateY(360deg); }
@@ -5215,7 +5221,8 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column; }
   #section-welcome .flex-2-elem .flex-elem {
-    width: 100%; }
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px); }
   #roadmap .roadmap-container {
     width: 100%;
     margin-left: 0; }
@@ -5251,6 +5258,8 @@ footer {
             flex-direction: column; }
     .flex-2-elem .flex-elem {
       width: 100%; }
+      .flex-2-elem .flex-elem.team-elem img {
+        width: auto; }
   .cryptocurrency-elem {
     margin-bottom: 20px; }
     .cryptocurrency-elem .cryptocurrency-elem-text {
@@ -5261,13 +5270,12 @@ footer {
     width: 100%;
     margin-left: 0; }
   iframe {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px); }
+    width: 100%; }
   .flex-2-elem .flex-elem.elem-flexed {
     width: -webkit-calc(100% - 100px);
     width: calc(100% - 100px); }
   #socials .soc-wrap .soc-link {
-    margin: 0 20px; }
+    margin: 0 15px; }
   .st-arrow {
     display: none; }
   .hamburger {
@@ -5329,7 +5337,14 @@ footer {
   .main-nav-wrap {
     padding: 10px 0; }
   a.logo img {
-    height: 60px; } }
+    height: 60px; }
+  .header-content h1 {
+    margin-top: auto;
+    margin-bottom: 10px; }
+  .header-content h4 {
+    margin: 10px 0; }
+  .header-content h3 {
+    margin: 10px 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -5345,7 +5360,24 @@ footer {
     width: 100%; }
   .subscribe input {
     margin-right: 0;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  #socials .soc-wrap {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #socials .soc-wrap .soc-link {
+      margin: 15px;
+      display: block;
+      width: -webkit-calc(100%/3 - 30px);
+      width: calc(100%/3 - 30px);
+      text-align: center; }
+  .flex-2-elem .flex-elem.team-elem img {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px); } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {

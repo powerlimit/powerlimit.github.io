@@ -36,7 +36,7 @@
 				<nav class=" my-menu" id="my-menu">
 					<ul class="main-nav-list" >
 						<li><a class="menu--link main-menu-link" href="#section-welcome">About</a></li>
-						<li><a class="menu--link main-menu-link" href="#cryptocurrency">Whitepaper</a></li>
+						<li><a class="menu--link " href="http://ya.ru">Whitepaper</a></li>
 						<li><a class="menu--link main-menu-link" href="#roadmap">Roadmap</a></li>
 						<li><a class="menu--link main-menu-link" href="#faq">faq</a></li>
 						<li><a class="menu--link main-menu-link" href="#subscribe">telegram</a></li>
@@ -50,19 +50,19 @@
 			</div>
 		</div>
 	</div>
-	<header>
+	<header  id="top">
 		<div class="container">
 			
 		</div>
 		<div class="header-content second-screen">
-			<h1>Build <span>your unique</span> crypto town</h1>
-			<h4>Pre-ICO tokensale started in september 2017. Hardcap is X1 eth. <br>Current bouns is 200%. X2 eth to next price increase</h4>
-			<h3>buy tokens</h3>
+			<h1 class="wow fadeInDown">Build <span>your unique</span> crypto town</h1>
+			<h4 class="wow fadeInLeft">Pre-ICO tokensale started in september 2017. Hardcap is X1 eth. <br>Current bouns is 200%. X2 eth to next price increase</h4>
+			<h3 class="wow fadeInRight">buy tokens</h3>
 			
-			<form class="main-form">
+			<form class="main-form wow fadeInUp">
 				<div class="form-left">
 					<div class="form-row">
-						<span>ETH</span><input type="text" placeholder="1.00000000" class="get-eth" >
+						<span>ETH</span><input type="text" placeholder="1.00000000" class="get-eth" name="ETH" oninput="var v = this.value; this.form.userTokensGet.value = isNaN(v) ? '' : (v * 2).toFixed(8)" >
 					</div>
 					<div class="form-row">
 						<input type="text" placeholder="Your contact mail">
@@ -70,7 +70,7 @@
 				</div>
 				<div class="form-right">
 					<div class="form-row">
-						<span class="get">Get</span><input type="text" placeholder="10 000.00" class="get-token">
+						<span>GET</span><input type="text" placeholder="10 000.00" class="get-token" name="userTokensGet">
 					</div>
 					<div class="form-row">
 						<button class="button">Send</button>
@@ -86,13 +86,13 @@
 		</div>
 	</header>
 	<section class="section section-with-bg section-welcome tracked" id="section-welcome">
-		<h2>Welcome to the Deep</h2>
+		<h2 class="wow fadeInDown">Welcome to the Deep</h2>
 		<div class="container">
 			<div class="flex-2-elem flex-elems-container">
-				<div class="flex-elem">
+				<div class="flex-elem wow fadeInLeft">
 					<iframe height="315" src="https://www.youtube.com/embed/Fr4p3yRVbDY" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class="flex-elem">
+				<div class="flex-elem wow fadeInRight">
 					<p class="opa05">Imagine world you are really dream about. World with completely democratic and independent struct based on best cryptographic algorithms. World with fixed sizes and unlimited potential.</p>
 					<p class="opa05">Travel Deep and rule it. Private favorite region. Get gold for network support. Spend gold to construct your town. Become a delegate and take part in Deep managment. Communicate with other users and walk together. Include your services into owned territory.</p>
 					<p class="opa05">Expand imagination borders with Deep. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -103,7 +103,7 @@
 	</section>
 
 	<section class="section section-advantages">
-		<h2>Advantages of deep</h2>
+		<h2 class="wow fadeInDown">Advantages of deep</h2>
 		<div class="container">
 			<div class="flex-4-elem flex-elems-container">
 				<div class="flex-elem">
@@ -131,7 +131,7 @@
 	</section>
 
 	<section class="section cryptocurrency" id="cryptocurrency">
-		<h2>Deep makes cryptocurrency</h2>
+		<h2 class="wow fadeInDown">Deep makes cryptocurrency</h2>
 		<div class="container">
 			<div class="cryptocurrency-elems-wrap">
 				<div class="cryptocurrency-elem">
@@ -189,7 +189,7 @@
 	</section>
 	<section class="section sale-terms">
 		<div class="container">
-			<h2>Token Sale Terms</h2>
+			<h2 class="ewq wow fadeInDown">Token Sale Terms</h2>
 			<h3>Contribution period</h3>
 			<div class="sale-terms-text">
 				<p class="opa05">
@@ -210,7 +210,7 @@
 	</section>
 	<section class="section tracked" id="roadmap">
 		<div class="container">
-			<h2 class="animated">roadmap</h2>
+			<h2 class="wow fadeInDown">roadmap</h2>
 			<div class="roadmap-container">
 				<div class="roadmap-element roadmap-left-element">
 					<p class="with-dot">Initial Research + Experiments</p>
@@ -266,14 +266,14 @@
 
 	<section class="section team">
 		<div class="container">
-			<h2>Deep Team</h2>
+			<h2 class="wow fadeInDown">Deep Team</h2>
 			<div class="flex-2-elem flex-elems-container">
-				<div class="flex-elem elem-flexed">
+				<div class="flex-elem elem-flexed team-elem">
 					<img src="img/closer.jpg" alt="">
 					<h4>Esteban Ordano</h4>
 					<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
 				</div>
-				<div class="flex-elem elem-flexed">
+				<div class="flex-elem elem-flexed team-elem">
 					<img src="img/closer.jpg" alt="">
 					<h4>Esteban Ordano</h4>
 					<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
@@ -281,12 +281,12 @@
 			</div>
 			<h3>Advisors</h3>
 			<div class="flex-2-elem flex-elems-container">
-				<div class="flex-elem elem-flexed">
+				<div class="flex-elem elem-flexed team-elem">
 					<img src="img/closer.jpg" alt="">
 					<h4>Esteban Ordano</h4>
 					<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
 				</div>
-				<div class="flex-elem elem-flexed">
+				<div class="flex-elem elem-flexed team-elem">
 					<img src="img/closer.jpg" alt="">
 					<h4>Esteban Ordano</h4>
 					<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
@@ -297,7 +297,7 @@
 
 	<section class="section tracked" id="faq">
 		<div class="container">
-			<h2>faq</h2>
+			<h2 class="wow fadeInDown">faq</h2>
 			<div id="st-accordion" class="st-accordion">
 				<ul>
 					<li>
@@ -354,7 +354,7 @@
 	</section>
 	<section class="subscribe tracked" id="subscribe">
 		<div class="container">
-			<h2>subscribe for updates</h2>
+			<h2 class="wow fadeInDown">subscribe for updates</h2>
 			<form class="bottom-form">
 				<input type="text" placeholder="Your contact mail" name="mail"> <button class="button">send</button>
 			</form>
@@ -368,6 +368,7 @@
 				<a href="#" target="_blanc" class="soc-link"><img src="img/twitter.png" alt="twitter"></a>
 				<a href="#" target="_blanc" class="soc-link"><img src="img/medium.png" alt="medium"></a>
 				<a href="#" target="_blanc" class="soc-link"><img src="img/steemit.png" alt="steemit"></a>
+				<a href="#" target="_blanc" class="soc-link"><img src="img/bitcoin.png" alt="bitcoin"></a>
 			</div>
 		</div>
 	</section>
@@ -381,7 +382,7 @@
 					Registered Company Number: 09739669
 				</div>
 				<div class="">
-					<a href="#" class="up-button">buy tokens</a>
+					<a href="#top" class="up-button menu--link">buy tokens</a>
 				</div>
 				<div class="">
 					<a href="mailto:support@deep.gold">support@deep.gold</a>
@@ -393,12 +394,15 @@
 		</div>
 	</footer>
 
-	<div class="show-canvas">
-		<script src='libs/three/index.js'></script>
-	</div>
+	
 	
 	<link rel="stylesheet" href="css/main.min.css">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js'></script>
+	<script src="libs/three2/index.js"></script>
+	
 	<script src="js/scripts.min.js"></script>
+	
+		
 
 
 
