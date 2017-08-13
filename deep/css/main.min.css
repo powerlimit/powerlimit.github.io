@@ -4573,8 +4573,7 @@ a.logo img {
 .active-menu {
   background: -webkit-gradient(linear, left top, left bottom, from(#120118), color-stop(50%, #1a0234), to(#01101f));
   background: -webkit-linear-gradient(top, #120118 0%, #1a0234 50%, #01101f 100%);
-  background: linear-gradient(to bottom, #120118 0%, #1a0234 50%, #01101f 100%);
-  padding: 10px 0; }
+  background: linear-gradient(to bottom, #120118 0%, #1a0234 50%, #01101f 100%); }
   .active-menu a.logo img {
     height: 60px; }
 
@@ -4694,8 +4693,7 @@ a.logo img {
     .form-row input.get-token {
       text-align: right;
       padding-right: 40px;
-      background: #fff url("../img/token-logo.png") no-repeat 95% center;
-      background-size: 10%; }
+      background: #fff url("../img/token-logo-small.png") no-repeat 95% center; }
     .form-row input.get-eth {
       text-align: left; }
 
