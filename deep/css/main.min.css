@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "roboto-regular";
   font-weight: normal;
@@ -987,274 +986,6 @@ canvas {
 
 h1 {
   color: #fff; }
-
-/* Flexible Slide-to-top Accordion Style*/
-.wrapper {
-  width: 90%;
-  max-width: 800px;
-  margin: 30px auto; }
-
-.st-accordion {
-  width: 100%;
-  min-width: 270px;
-  margin: 0 auto; }
-
-.st-accordion ul li {
-  height: 100px;
-  border-bottom: 1px solid #c7deef;
-  border-top: 1px solid #fff;
-  overflow: hidden; }
-
-.st-accordion ul li:first-child {
-  border-top: none; }
-
-.st-accordion ul li > a {
-  text-shadow: 1px 1px 1px #fff;
-  font-size: 46px;
-  display: block;
-  position: relative;
-  line-height: 100px;
-  outline: none;
-  -webkit-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out; }
-
-.st-accordion ul li > a span {
-  width: 26px;
-  height: 14px;
-  position: absolute;
-  top: 0;
-  right: 10px;
-  margin-top: -7px;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-
-.st-accordion ul li > a:hover {
-  color: #1693eb; }
-
-.st-accordion ul li > a:hover span {
-  opacity: 1;
-  right: 10px; }
-
-.st-accordion ul li.st-open > a {
-  color: #1693eb; }
-
-.st-accordion ul li.st-open > a span {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
-  right: 10px;
-  top: 120px;
-  opacity: 1; }
-
-.st-content {
-  padding: 5px 0px 30px 0px; }
-
-.st-content p {
-  font-size: 16px;
-  line-height: 28px;
-  padding: 0px 4px 15px 4px; }
-
-.st-content img {
-  width: 125px;
-  border-right: 1px solid #fff;
-  border-bottom: 1px solid #fff; }
-
-@media screen and (max-width: 320px) {
-  .st-accordion ul li > a {
-    font-size: 36px; } }
-
-/*
-* Лёгкийи и отзывчивый аккордеон
-* минимум кода, максимум функционала
-* без javascript, на чистом CSS
-* работает на скрытых checkbox.
-* автор: @dobrovoi dbmast.ru
-*/
-/* 
-* Формируем базовый контейнер аккордеона 
-*/
-.accordion {
-  width: -webkit-calc(100% - 10px);
-  width: calc(100% - 10px);
-  margin: 0 auto;
-  /*
-ширина произвольная выбирается
-*в зависимостиот места размещения 
-*/
-  min-height: 0;
-  display: block;
-  /* относительное позиционирование */
-  position: relative;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden; }
-
-.accordion li {
-  border: 1px solid #ccc;
-  -webkit-box-shadow: 0px 0px 1px 1px rgba(200, 200, 200, 0.7);
-          box-shadow: 0px 0px 1px 1px rgba(200, 200, 200, 0.7);
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  margin-bottom: 10px;
-  background: #fff; }
-
-/* заголовки панелей аккордеона */
-.accordion h5 {
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  display: block;
-  margin: 0;
-  padding: 10px 25px;
-  cursor: pointer;
-  color: #222;
-  background: #fff;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-border-radius: 5px;
-          border-radius: 5px; }
-
-/* заголовки панелей аккордеона при наведении
-* в данном варианте не срабатывает
-*/
-/* .accordion h2:hover {
-    display: block;
-    background-color: #005049;
-}
-*/
-/* Формируем блоки с содерханием */
-.msg {
-  position: relative;
-  overflow: hidden;
-  max-height: 800px;
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0); }
-
-/* оформляем параграфы */
-.msg p {
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 1px;
-  padding: 10px 25px; }
-
-/* Позаботимся о небольших экранах */
-@media (max-width: 550px) {
-  .accordion {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-    max-width: 100%;
-    min-height: 100%;
-    margin: 0;
-    left: 0; } }
-
-/* Формируем неупорядоченный список */
-.accordion ul {
-  list-style: none;
-  -webkit-perspective: 900;
-          perspective: 900;
-  padding: 0;
-  margin: 0; }
-
-/* Определяем и формируем отдельный элемент списка 
- * в который поместим скрытый флажек,
- * заголовок панелей и блок с содержанием
-*/
-.accordion ul li {
-  position: relative;
-  padding: 0;
-  margin: 0 0 10px 0; }
-
-/* устанавливаем время ожидания перед воспроизведением анимации 
- * на основе нумерации в дереве элементов
-*/
-.accordion ul li:nth-of-type(1) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s; }
-
-.accordion ul li:nth-of-type(2) {
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s; }
-
-.accordion ul li:nth-of-type(3) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s; }
-
-.accordion ul li:last-of-type {
-  padding-bottom: 0; }
-
-/* Сформируем  указатель переключения состояния аккордеона */
-.accordion ul li i {
-  position: absolute;
-  -webkit-transform: translate(-6px, 0);
-      -ms-transform: translate(-6px, 0);
-          transform: translate(-6px, 0);
-  margin-top: 16px;
-  /* расположим указатель на панели заголовка справа */
-  right: 25px; }
-
-/* "Рисуем " сам указатель */
-.accordion ul li i:before, .accordion ul li i:after {
-  content: "";
-  position: absolute;
-  background-color: #222;
-  width: 3px;
-  height: 9px; }
-
-/* Добавляем элемент трансформации указателя при переключении */
-.accordion ul li i:before {
-  -webkit-transform: translate(-2px, 0) rotate(45deg);
-      -ms-transform: translate(-2px, 0) rotate(45deg);
-          transform: translate(-2px, 0) rotate(45deg); }
-
-.accordion ul li i:after {
-  -webkit-transform: translate(2px, 0) rotate(-45deg);
-      -ms-transform: translate(2px, 0) rotate(-45deg);
-          transform: translate(2px, 0) rotate(-45deg); }
-
-/* Делаем чекбокс скрытым*/
-.accordion ul li input[type=checkbox] {
-  position: absolute;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  opacity: 0; }
-
-/* Когда у флажка установлен checked  
- * блок с содержанием скрыт
-*/
-.accordion ul li input[type=checkbox]:checked ~ div.msg {
-  margin-top: 0;
-  max-height: 0;
-  opacity: 0;
-  -webkit-transform: translate(0, 50%);
-      -ms-transform: translate(0, 50%);
-          transform: translate(0, 50%); }
-
-/* А указатель показывает вниз */
-.accordion ul li input[type=checkbox]:checked ~ i:before {
-  -webkit-transform: translate(2px, 0) rotate(45deg);
-      -ms-transform: translate(2px, 0) rotate(45deg);
-          transform: translate(2px, 0) rotate(45deg); }
-
-.accordion ul li input[type=checkbox]:checked ~ i:after {
-  -webkit-transform: translate(-2px, 0) rotate(-45deg);
-      -ms-transform: translate(-2px, 0) rotate(-45deg);
-          transform: translate(-2px, 0) rotate(-45deg); }
-
-/*  Устанавливаем эффект перехода
- * между двумя состояниями указателя 
-*/
-div.msg, ul li i:before, ul li i:after {
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
 
 /*!
  * Hamburgers
@@ -4780,7 +4511,7 @@ canvas {
   z-index: 1; }
 
 .main-nav-wrap {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 50;
@@ -5340,6 +5071,9 @@ footer {
           background-color: #FFF;
           color: #1a0234; }
 
+dt {
+  cursor: pointer; }
+
 .alert-wrap {
   position: fixed;
   top: 0;
@@ -5479,6 +5213,28 @@ footer {
                   -ms-grid-row-align: center;
               align-self: center; }
 
+.accordeon {
+  font-size: 16px; }
+  .accordeon dl {
+    background: #fff;
+    padding: 15px 10px;
+    margin: 0;
+    border-bottom: 1px solid #370074; }
+    .accordeon dl:last-child {
+      border-bottom: none; }
+    .accordeon dl dt img {
+      float: right;
+      display: inline-block;
+      padding: 7px;
+      -webkit-transition: 0.3s all ease;
+      transition: 0.3s all ease; }
+    .accordeon dl dt.active {
+      color: #370074; }
+      .accordeon dl dt.active img {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg); }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -5562,6 +5318,11 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  #timer9851ee392a9fb0ca703e5ded35583f2f .timer-slide-inner {
+    font-size: 16px !important; }
+  .timer-separator {
+    font-size: 16px !important;
+    padding: 0 10px !important; }
   .alert .message {
     height: auto;
     width: -webkit-calc(100% - 30px);
@@ -5610,6 +5371,8 @@ footer {
     margin: 0 15px; }
   .st-arrow {
     display: none; }
+  .main-nav-wrap {
+    position: fixed; }
   .hamburger {
     display: block;
     text-align: right;
@@ -5671,12 +5434,13 @@ footer {
   a.logo img {
     height: 60px; }
   .header-content h1 {
-    margin-top: auto;
     margin-bottom: 10px; }
   .header-content h4 {
     margin: 10px 0; }
   .header-content h3 {
-    margin: 10px 0; } }
+    margin: 10px 0; }
+  .accordeon dl dt img {
+    display: none; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
