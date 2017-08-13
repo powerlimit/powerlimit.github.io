@@ -4762,7 +4762,7 @@ a.button {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.first-screen, .second-screen {
+.third-screen, .second-screen {
   display: none !important; }
 
 header {
@@ -5346,7 +5346,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 100; }
+  z-index: 100;
+  display: none; }
 
 .alert {
   width: 100%;
