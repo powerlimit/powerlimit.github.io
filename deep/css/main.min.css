@@ -5000,8 +5000,8 @@ a.logo img {
     margin-right: 20px;
     width: 250px; }
 
-.form-row input[disabled] {
-  background-color: #fff; }
+.form-row input.get-token {
+  background-color: #fff !important; }
 
 #socials {
   padding: 30px 0; }
@@ -5461,6 +5461,9 @@ dt {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   /**/
+  .center-flex {
+    display: block;
+    text-align: center; }
   .alert .message .pay-wallet {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5496,7 +5499,43 @@ dt {
       text-align: center; }
   .flex-2-elem .flex-elem.team-elem img {
     width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px); } }
+    width: calc(100% - 30px); }
+  .main-nav-wrap:after {
+    clear: both; }
+  .main-nav {
+    display: block; }
+  .hamburger {
+    float: right; }
+  nav.my-menu {
+    height: auto; }
+    nav.my-menu ul {
+      display: block;
+      height: auto; }
+      nav.my-menu ul li {
+        padding: 10px 0; }
+  header {
+    display: block;
+    min-height: auto; }
+  .header-content {
+    display: block;
+    height: auto;
+    margin-top: 100px;
+    padding: 0 15px;
+    position: relative;
+    min-height: auto;
+    padding-bottom: 30px; }
+  .main-form {
+    display: block; }
+    .main-form .form-row {
+      display: block; }
+      .main-form .form-row span {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+        text-align: center; }
+      .main-form .form-row input {
+        display: block; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
