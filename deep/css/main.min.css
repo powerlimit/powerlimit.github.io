@@ -978,15 +978,6 @@ hr {
   .hidden-print {
     display: none !important; } }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; }
-
-h1 {
-  color: #fff; }
-
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -4496,6 +4487,9 @@ a.button {
 .third-screen, .first-screen {
   display: none !important; }
 
+video {
+  width: 100%; }
+
 header {
   min-height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(#120118), color-stop(50%, #1a0234), to(#01101f));
@@ -4590,6 +4584,9 @@ a.logo img {
   .hamburger .hamburger-inner, .hamburger .hamburger-inner::after, .hamburger .hamburger-inner::before {
     background-color: #fff; }
 
+.wow {
+  -weblit-animation-delay: 0; }
+
 .header-content {
   position: absolute;
   top: 0;
@@ -4623,7 +4620,8 @@ a.logo img {
     text-align: center;
     text-transform: uppercase;
     line-height: 1;
-    margin: 2rem 0rem 1.8rem; }
+    margin: 2rem 0rem 1.8rem;
+    color: #fff; }
     .header-content h1 span {
       font-family: 'roboto-thin', sans-serif; }
   .header-content h4, .header-content h3 {
