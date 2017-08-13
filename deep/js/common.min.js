@@ -11,12 +11,46 @@ $(function() {
 
 
 
+$(".mf").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			var GE = $('.get-eth').val();
+			var GT = $('.get-token').val();
+			$('.sss').html(GE);
+			$('.ssd').html(GT);
+			$('.alert-wrap').fadeIn('slow');
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+
+
+
+
+
+$('.close').click(function(){
+	$('.alert-wrap').fadeOut('slow');
+})
+
+
+
 $('#st-accordion').accordion({
 		oneOpenedItem	: true
 	});
 
 
- 
+setTimeout(function(){
+	$('#hideOnMobile').removeAttr("src");
+}, 1000);
+
 
 
 	
@@ -25,14 +59,14 @@ $('#st-accordion').accordion({
 	
 
 	$(".menu--link").click(function (event) {			//Плавный скролл
-        event.preventDefault();
+         event.preventDefault();  
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 750);
     });
     
 
-	$('.hamburger').click(function(event){  				//обработка клика на кнопку
+	$('.hamburger').click(function(event){   				//обработка клика на кнопку
 		event.preventDefault();
 		if(! myNav.hasClass('active')/* || myNav.css('display', 'none')*/){
 			myNav.addClass('active');
@@ -111,5 +145,8 @@ $('#st-accordion').accordion({
 
 
 
+
+
 });
 
+ //document.secondForm.sendVal.value = document.mainForm.ETH.value;

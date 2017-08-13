@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "roboto-regular";
   font-weight: normal;
@@ -979,14 +980,10 @@ hr {
     display: none !important; } }
 
 canvas {
-  background: -webkit-gradient(linear, left top, right top, from(#1e5799), color-stop(50%, #2989d8), color-stop(51%, #207cca), to(#7db9e8));
-  background: -webkit-linear-gradient(left, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  background: linear-gradient(to right, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: -1; }
+  width: 100%; }
 
 h1 {
   color: #fff; }
@@ -1066,6 +1063,198 @@ h1 {
 @media screen and (max-width: 320px) {
   .st-accordion ul li > a {
     font-size: 36px; } }
+
+/*
+* Лёгкийи и отзывчивый аккордеон
+* минимум кода, максимум функционала
+* без javascript, на чистом CSS
+* работает на скрытых checkbox.
+* автор: @dobrovoi dbmast.ru
+*/
+/* 
+* Формируем базовый контейнер аккордеона 
+*/
+.accordion {
+  width: -webkit-calc(100% - 10px);
+  width: calc(100% - 10px);
+  margin: 0 auto;
+  /*
+ширина произвольная выбирается
+*в зависимостиот места размещения 
+*/
+  min-height: 0;
+  display: block;
+  /* относительное позиционирование */
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden; }
+
+.accordion li {
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(200, 200, 200, 0.7);
+          box-shadow: 0px 0px 1px 1px rgba(200, 200, 200, 0.7);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin-bottom: 10px;
+  background: #fff; }
+
+/* заголовки панелей аккордеона */
+.accordion h5 {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: #222;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+          border-radius: 5px; }
+
+/* заголовки панелей аккордеона при наведении
+* в данном варианте не срабатывает
+*/
+/* .accordion h2:hover {
+    display: block;
+    background-color: #005049;
+}
+*/
+/* Формируем блоки с содерханием */
+.msg {
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0); }
+
+/* оформляем параграфы */
+.msg p {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 10px 25px; }
+
+/* Позаботимся о небольших экранах */
+@media (max-width: 550px) {
+  .accordion {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0; } }
+
+/* Формируем неупорядоченный список */
+.accordion ul {
+  list-style: none;
+  -webkit-perspective: 900;
+          perspective: 900;
+  padding: 0;
+  margin: 0; }
+
+/* Определяем и формируем отдельный элемент списка 
+ * в который поместим скрытый флажек,
+ * заголовок панелей и блок с содержанием
+*/
+.accordion ul li {
+  position: relative;
+  padding: 0;
+  margin: 0 0 10px 0; }
+
+/* устанавливаем время ожидания перед воспроизведением анимации 
+ * на основе нумерации в дереве элементов
+*/
+.accordion ul li:nth-of-type(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s; }
+
+.accordion ul li:nth-of-type(2) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s; }
+
+.accordion ul li:nth-of-type(3) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
+
+.accordion ul li:last-of-type {
+  padding-bottom: 0; }
+
+/* Сформируем  указатель переключения состояния аккордеона */
+.accordion ul li i {
+  position: absolute;
+  -webkit-transform: translate(-6px, 0);
+      -ms-transform: translate(-6px, 0);
+          transform: translate(-6px, 0);
+  margin-top: 16px;
+  /* расположим указатель на панели заголовка справа */
+  right: 25px; }
+
+/* "Рисуем " сам указатель */
+.accordion ul li i:before, .accordion ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #222;
+  width: 3px;
+  height: 9px; }
+
+/* Добавляем элемент трансформации указателя при переключении */
+.accordion ul li i:before {
+  -webkit-transform: translate(-2px, 0) rotate(45deg);
+      -ms-transform: translate(-2px, 0) rotate(45deg);
+          transform: translate(-2px, 0) rotate(45deg); }
+
+.accordion ul li i:after {
+  -webkit-transform: translate(2px, 0) rotate(-45deg);
+      -ms-transform: translate(2px, 0) rotate(-45deg);
+          transform: translate(2px, 0) rotate(-45deg); }
+
+/* Делаем чекбокс скрытым*/
+.accordion ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0; }
+
+/* Когда у флажка установлен checked  
+ * блок с содержанием скрыт
+*/
+.accordion ul li input[type=checkbox]:checked ~ div.msg {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transform: translate(0, 50%);
+      -ms-transform: translate(0, 50%);
+          transform: translate(0, 50%); }
+
+/* А указатель показывает вниз */
+.accordion ul li input[type=checkbox]:checked ~ i:before {
+  -webkit-transform: translate(2px, 0) rotate(45deg);
+      -ms-transform: translate(2px, 0) rotate(45deg);
+          transform: translate(2px, 0) rotate(45deg); }
+
+.accordion ul li input[type=checkbox]:checked ~ i:after {
+  -webkit-transform: translate(-2px, 0) rotate(-45deg);
+      -ms-transform: translate(-2px, 0) rotate(-45deg);
+          transform: translate(-2px, 0) rotate(-45deg); }
+
+/*  Устанавливаем эффект перехода
+ * между двумя состояниями указателя 
+*/
+div.msg, ul li i:before, ul li i:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 /*!
  * Hamburgers
@@ -4573,7 +4762,7 @@ a.button {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.first-screen {
+.first-screen, .second-screen {
   display: none !important; }
 
 header {
@@ -4583,6 +4772,8 @@ header {
   background: linear-gradient(to bottom, #120118 0%, #1a0234 50%, #01101f 100%); }
 
 canvas {
+  height: 60vh !important;
+  margin-top: 40vh;
   position: absolute;
   background: transparent !important;
   overflow: hidden;
@@ -4696,7 +4887,7 @@ a.logo img {
     text-align: center;
     text-transform: uppercase;
     line-height: 1;
-    margin: 2rem 0; }
+    margin: 2rem 0rem 1.8rem; }
     .header-content h1 span {
       font-family: 'roboto-thin', sans-serif; }
   .header-content h4, .header-content h3 {
@@ -4708,6 +4899,8 @@ a.logo img {
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 30px; }
+  .header-content h4 {
+    margin: 2rem 0 3rem; }
 
 .main-form {
   display: -webkit-flex;
@@ -5047,12 +5240,8 @@ a.logo img {
 #faq {
   background: url("../img/faq-bg.png") no-repeat center bottom; }
 
-.st-accordion ul li > a {
-  font-family: 'roboto-light', sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  color: #000;
-  text-decoration: none; }
+.accordion {
+  font-weight: bold; }
 
 .subscribe {
   padding: 20px 0 30px;
@@ -5151,6 +5340,144 @@ footer {
           background-color: #FFF;
           color: #1a0234; }
 
+.alert-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100; }
+
+.alert {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .alert .message {
+    width: 670px;
+    height: 380px;
+    background-color: #FFF;
+    color: #000;
+    margin: auto;
+    padding: 50px 10px 30px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .alert .message .msg-title {
+      font-family: 'roboto-black', sans-serif;
+      text-transform: uppercase;
+      font-size: 18px;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .alert .message .msg-title span {
+        margin: 0 20px;
+        white-space: nowrap; }
+      .alert .message .msg-title:before, .alert .message .msg-title:after {
+        height: 1px;
+        width: 100%;
+        content: "";
+        background-color: #ccc;
+        position: relative;
+        display: inline-block; }
+    .alert .message .pay-wallet, .alert .message .change {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 0 60px; }
+    .alert .message .send, .alert .message .rec {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .alert .message .send > *, .alert .message .rec > * {
+        margin: 0 5px; }
+    .alert .message .token-logo {
+      display: inline-block;
+      height: 16px;
+      margin-right: 0; }
+    .alert .message .w1 {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 10px; }
+      .alert .message .w1 span {
+        margin: 0 20px;
+        white-space: nowrap; }
+      .alert .message .w1:before, .alert .message .w1:after {
+        height: 1px;
+        width: 100%;
+        content: "";
+        background-color: #ccc;
+        position: relative;
+        display: inline-block; }
+    .alert .message .w2 {
+      text-align: center; }
+    .alert .message button {
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+                  -ms-grid-row-align: center;
+              align-self: center; }
+
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -5234,6 +5561,13 @@ footer {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .alert .message {
+    height: auto;
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+    padding: 10px; }
+    .alert .message .pay-wallet {
+      margin: 0; }
   /**/
   .main-form {
     -webkit-box-orient: vertical;
@@ -5346,6 +5680,13 @@ footer {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   /**/
+  .alert .message .pay-wallet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center; }
   .flex-4-elem .flex-elem {
     width: 100%; }
   #roadmap .roadmap-container .roadmap-element {

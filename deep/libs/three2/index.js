@@ -8,11 +8,11 @@ Date: 08/14/2014
 
 */
 
-var SEPARATION = 150, AMOUNTX = 40, AMOUNTY = 20;
+var SEPARATION = 60, AMOUNTX = 100, AMOUNTY = 30;
 
 var container;
 var camera, scene, renderer;
-/*
+
 
 if (window.WebGLRenderingContext){
 	renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
@@ -20,7 +20,7 @@ if (window.WebGLRenderingContext){
 else {
 	renderer = new THREE.CanvasRenderer();
 	}
-*/
+
 
 var particles, particle, count = 0;
 
@@ -42,7 +42,7 @@ function init() {
 	camera.position.y = 280; //changes how far back you can see i.e the particles towards horizon
 	camera.position.z = 110; //This is how close or far the particles are seen
 	
-	camera.rotation.x = 0.35;
+	camera.rotation.x = 0.70;
 	
 	scene = new THREE.Scene();
 
@@ -79,7 +79,7 @@ function init() {
 
 	renderer = new THREE.CanvasRenderer();
 	renderer.setSize( window.innerWidth, window.innerHeight );
-	renderer.setClearColor( 0x190234, 1);
+	renderer.setClearColor( 0x000000, 0 );
 	container.appendChild( renderer.domElement );
 
 	window.addEventListener( 'resize', onWindowResize, false );

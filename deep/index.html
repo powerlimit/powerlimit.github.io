@@ -69,40 +69,96 @@
 			<h4 class="wow fadeInLeft">Pre-ICO tokensale started in september 2017. Hardcap is X1 eth. <br>Current bouns is 200%. X2 eth to next price increase</h4>
 			<h3 class="wow fadeInRight">buy tokens</h3>
 			
-			<form class="main-form wow fadeInUp">
+			<form name="mainForm" class="mf">
+				<div class="main-form main-form wow fadeInUp">
 				<div class="form-left">
 					<div class="form-row">
-						<span>ETH</span><input type="text" placeholder="1.00000000" class="get-eth" name="ETH" oninput="var v = this.value; this.form.userTokensGet.value = isNaN(v) ? '' : (v * 2).toFixed(8)" >
+					<input type="hidden" name="project_name" value="Site Name">
+				<input type="hidden" name="form_subject" value="Form Subject">
+						<span>ETH</span><input type="text" placeholder="1.00000000" class="get-eth" name="ETH" oninput="var v = this.value; var g = v*2; this.form.userTokensGet.value = isNaN(g) ? '' : g.toFixed(8); this.form.sendVal.value = v; this.form.recVal.value = g.toFixed(8);" >
 					</div>
 					<div class="form-row">
-						<input type="text" placeholder="Your contact mail">
+						<input type="text" name="form_subject" placeholder="Your contact mail">
 					</div>
 				</div>
 				<div class="form-right">
 					<div class="form-row">
-						<span>GET</span><input type="text" placeholder="10 000.00" class="get-token" name="userTokensGet">
+						<span>GET</span><input type="text" disabled placeholder="10 000.00" class="get-token" name="userTokensGet" >
 					</div>
 					<div class="form-row">
+						
 						<button class="button">Send</button>
 					</div>
 				</div>
+				</div>
 			</form>
 		</div>
+		
+
+
+
 		<div class="header-content first-screen">
 			<h1>Build <span>your unique</span> crypto town</h1>
 			<h4>Pre-ICO starts 1 setpember 2017</h4>
 			<script src="http://megatimer.ru/s/9851ee392a9fb0ca703e5ded35583f2f.js"></script>
 			
 		</div>
+		<div class="header-content third-screen">
+			<h1 class="wow fadeInDown">Build <span>your unique</span> crypto town</h1>
+			<h4>Pre-ICO is finished. Deep in development</h4>
+			<a href="#section-welcome" class="menu--link" style="margin-top: 15px"><img src="img/mouse-down.png" alt=""></a>
+		</div>
 	</header>
+
+
+<div class="alert-wrap">
+	<div class="alert">
+			<div class="message">
+				<div class="msg-title">
+					<span>Deep purchase instruction</span>
+				</div>
+				<div class="pay-wallet">
+					<div class="pay-to">Pay ether to wallet</div>
+					<div class="str">-</div>
+					<div class="wallet">0x5AbFEc25f74CA88437631a7731906932776356AA</div>
+				</div>
+				
+
+					<div class="change">
+					
+						<div class="send">
+							Send - <span class="sss"></span> <img src="img/eth.png" alt="">
+						</div>
+						<div class="arr"><img src="img/arrows.png" alt=""></div>
+						<div class="rec">
+							Get - <span class="ssd"></span> <img src="img/token-logo.png" class="token-logo" alt="">
+						</div>
+					
+					</div>
+				
+				<div class="ws">
+					<div class="w1">
+						<span class="opa05">You may use any wallet that supports tokens.</span>
+					</div>
+					<div class="w2 opa05">
+						Do not send ETH directly from exchanges, multi-sig wallets or from other smart contracts
+					</div>
+				</div>
+				<button class="button close">OK</button>
+			</div>
+		</div>
+</div>
+
+
+
 	<section class="section section-with-bg section-welcome tracked" id="section-welcome">
 		<h2 class="wow fadeInDown">Welcome to the Deep</h2>
 		<div class="container">
 			<div class="flex-2-elem flex-elems-container">
-				<div class="flex-elem wow fadeInLeft">
+				<div class="flex-elem ">
 					<iframe height="315" src="https://www.youtube.com/embed/Fr4p3yRVbDY" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class="flex-elem wow fadeInRight">
+				<div class="flex-elem ">
 					<p class="opa05">Imagine world you are really dream about. World with completely democratic and independent struct based on best cryptographic algorithms. World with fixed sizes and unlimited potential.</p>
 					<p class="opa05">Travel Deep and rule it. Private favorite region. Get gold for network support. Spend gold to construct your town. Become a delegate and take part in Deep managment. Communicate with other users and walk together. Include your services into owned territory.</p>
 					<p class="opa05">Expand imagination borders with Deep. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -148,7 +204,7 @@
 					<div class="cryptocurrency-elem-img">
 						<img src="img/lvl1.png" alt="" class="img-responsive wow rotateIn">
 					</div>
-					<div class="cryptocurrency-elem-text wow lightSpeedIn">
+					<div class="cryptocurrency-elem-text wow bounceIn">
 						<h4>LVL 1 Эфир\Deep</h4>
 						<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -158,7 +214,7 @@
 					<div class="cryptocurrency-elem-img">
 						<img src="img/lvl2.png" alt="" class="img-responsive wow rotateIn">
 					</div>
-					<div class="cryptocurrency-elem-text wow lightSpeedIn">
+					<div class="cryptocurrency-elem-text wow bounceIn">
 						<h4>LVL 2 Land private</h4>
 						<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
 						<p class="opa05">esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde</p>
@@ -168,7 +224,7 @@
 					<div class="cryptocurrency-elem-img">
 						<img src="img/lvl3.png" alt="" class="img-responsive wow rotateIn">
 					</div>
-					<div class="cryptocurrency-elem-text wow lightSpeedIn">
+					<div class="cryptocurrency-elem-text wow bounceIn">
 						<h4>LVL 3 Building</h4>
 						<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
 						<p class="opa05">esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde</p>
@@ -178,7 +234,7 @@
 					<div class="cryptocurrency-elem-img">
 						<img src="img/lvl4.png" alt="" class="img-responsive wow rotateIn">
 					</div>
-					<div class="cryptocurrency-elem-text wow lightSpeedIn">
+					<div class="cryptocurrency-elem-text wow bounceIn">
 						<h4>LVL 4 Users interaction</h4>
 						<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
 						<p class="opa05">esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde</p>
@@ -188,7 +244,7 @@
 					<div class="cryptocurrency-elem-img">
 						<img src="img/lvl5.png" alt="" class="img-responsive wow rotateIn">
 					</div>
-					<div class="cryptocurrency-elem-text wow lightSpeedIn">
+					<div class="cryptocurrency-elem-text wow bounceIn">
 						<h4>LVL 5 DeepAPI</h4>
 						<p class="opa05">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
 						<p class="opa05">esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde</p>
@@ -222,47 +278,47 @@
 		<div class="container">
 			<h2 class="wow fadeInDown">roadmap</h2>
 			<div class="roadmap-container">
-				<div class="roadmap-element roadmap-left-element wow flipInY">
+				<div class="roadmap-element roadmap-left-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-right-element wow flipInY">
+				<div class="roadmap-element roadmap-right-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-left-element wow flipInY">
+				<div class="roadmap-element roadmap-left-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-right-element wow flipInY">
+				<div class="roadmap-element roadmap-right-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-left-element wow flipInY">
+				<div class="roadmap-element roadmap-left-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-right-element wow flipInY">
+				<div class="roadmap-element roadmap-right-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-left-element wow flipInY">
+				<div class="roadmap-element roadmap-left-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-right-element wow flipInY">
+				<div class="roadmap-element roadmap-right-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
 				</div>
-				<div class="roadmap-element roadmap-left-element wow flipInY">
+				<div class="roadmap-element roadmap-left-element wow fadeInDownBig">
 					<p class="with-dot">Initial Research + Experiments</p>
 					<p class="date">July - Dec 2016</p>
 					<p>Researched state-of-the-art web-based Blockchain technology and recognized the untapped potential.</p>
@@ -308,58 +364,93 @@
 	<section class="section tracked" id="faq">
 		<div class="container">
 			<h2 class="wow fadeInDown">faq</h2>
-			<div id="st-accordion" class="st-accordion">
-				<ul>
-					<li class="wow jackInTheBox">
-						<a href="#">What is invest.com's experience in security? Will Stox's Token Generation Event be safe?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-					<li class="wow jackInTheBox">
-						<a href="#">Who is invest.com?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-					<li class="wow jackInTheBox">
-						<a href="#">What is Stox?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-					<li class="wow jackInTheBox">
-						<a href="#">What is the STX token?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-					<li class="wow jackInTheBox">
-						<a href="#">How is Stox different from Gnosis and Augur?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-					<li class="wow jackInTheBox">
-						<a href="#">How does the Stox ecosystem work?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-					<li class="wow jackInTheBox">
-						<a href="#">How does the Stox platform work?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-					<li class="wow jackInTheBox">
-						<a href="#">What is invest.com's experience in security? Will Stox's Token Generation Event be safe?<span class="st-arrow"><img src="img/down.png" alt=""></span></a>
-						<div class="st-content">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
-						</div>
-					</li>
-				</ul>
-			</div>
+			<div class="accordion wow fadeInUp">
+		        <ul>
+		          <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">What is invest.com's experience in security? Will Stox's Token Generation Event be safe?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		          <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">Who is invest.com?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		          <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">What is Stox?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		           <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">What is the STX token?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		           <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">How is Stox different from Gnosis and Augur?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		          <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">How does the Stox ecosystem work?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		          <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">How does the Stox platform work?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		          <li>
+		            <input type="checkbox" checked>
+		            <i></i>
+		            <h5 class="title_block">What is invest.com's experience in security? Will Stox's Token Generation Event be safe?</h5>
+		            <div class="msg">
+		                <p class="opa05">
+		                	Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, veritatis dolor ea voluptatem quia hic quae aliquid itaque atque eos nesciunt neque ab optio, nobis architecto consequatur! Exercitationem velit, nesciunt error iusto nulla doloribus cumque odio ullam corrupti vel, in pariatur perspiciatis natus eos vitae deleniti consequuntur quo ducimus impedit!
+		                </p>
+		            </div>
+		          </li>
+		        </ul>
+		        </div>
+
+
+
 		</div>
 	</section>
 	<section class="subscribe tracked" id="subscribe">
@@ -407,9 +498,11 @@
 	
 	
 	<link rel="stylesheet" href="css/main.min.css">
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js'></script>
-	<script src="libs/three2/index.js"></script>
 	
+	
+	<script type="text/javascript">
+		if (screen.width > 768) document.write ('<script type="text/javascript" src="libs/three/index.js" ></sc' + 'ript>');
+	</script>
 	<script src="js/scripts.min.js"></script>
 	
 		
