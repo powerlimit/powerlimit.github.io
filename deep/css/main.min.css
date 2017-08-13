@@ -4493,7 +4493,7 @@ a.button {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.third-screen, .second-screen {
+.third-screen, .first-screen {
   display: none !important; }
 
 header {
@@ -4503,8 +4503,6 @@ header {
   background: linear-gradient(to bottom, #120118 0%, #1a0234 50%, #01101f 100%); }
 
 canvas {
-  height: 60vh !important;
-  margin-top: 40vh;
   position: absolute;
   background: transparent !important;
   overflow: hidden;
@@ -5218,7 +5216,7 @@ dt {
   .accordeon dl {
     padding: 0 10px;
     margin: 0;
-    border-bottom: 1px solid #370074; }
+    border-bottom: 1px solid #ccc; }
     .accordeon dl:last-child {
       border-bottom: none; }
     .accordeon dl dt {
@@ -5227,7 +5225,7 @@ dt {
       overflow: hidden; }
       .accordeon dl dt img {
         position: absolute;
-        right: -100px;
+        right: 0;
         display: inline-block;
         padding: 12px;
         -webkit-transition: 0.3s all ease;
