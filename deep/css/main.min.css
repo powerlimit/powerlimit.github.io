@@ -4575,6 +4575,16 @@ a.logo img {
   background: -webkit-linear-gradient(top, #120118 0%, #1a0234 50%, #01101f 100%);
   background: linear-gradient(to bottom, #120118 0%, #1a0234 50%, #01101f 100%); }
 
+#particles-js {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 2; }
+
 .hamburger {
   display: none; }
   .hamburger .hamburger-inner, .hamburger .hamburger-inner::after, .hamburger .hamburger-inner::before {
@@ -5438,14 +5448,15 @@ dt {
     padding: 10px 0; }
   a.logo img {
     height: 60px; }
-  .header-content h1 {
-    margin-bottom: 10px; }
   .header-content h4 {
     margin: 10px 0; }
   .header-content h3 {
     margin: 10px 0; }
   .accordeon dl dt img {
-    display: none; } }
+    display: none; }
+  .second-screen h1 {
+    margin-top: auto;
+    margin-bottom: 10px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
