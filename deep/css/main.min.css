@@ -5214,26 +5214,37 @@ dt {
               align-self: center; }
 
 .accordeon {
-  font-size: 16px; }
+  font-size: 20px; }
   .accordeon dl {
-    background: #fff;
-    padding: 15px 10px;
+    padding: 0 10px;
     margin: 0;
     border-bottom: 1px solid #370074; }
     .accordeon dl:last-child {
       border-bottom: none; }
-    .accordeon dl dt img {
-      float: right;
-      display: inline-block;
-      padding: 7px;
-      -webkit-transition: 0.3s all ease;
-      transition: 0.3s all ease; }
-    .accordeon dl dt.active {
-      color: #370074; }
-      .accordeon dl dt.active img {
-        -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-                transform: rotate(180deg); }
+    .accordeon dl dt {
+      padding: 25px 0;
+      position: relative;
+      overflow: hidden; }
+      .accordeon dl dt img {
+        position: absolute;
+        right: -100px;
+        display: inline-block;
+        padding: 12px;
+        -webkit-transition: 0.3s all ease;
+        transition: 0.3s all ease; }
+      .accordeon dl dt:hover img {
+        right: 0; }
+      .accordeon dl dt.active {
+        color: #370074; }
+        .accordeon dl dt.active img {
+          -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+                  transform: rotate(180deg);
+          right: 0; }
+    .accordeon dl dd {
+      font-size: 16px;
+      margin: 0;
+      padding-bottom: 10px; }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
