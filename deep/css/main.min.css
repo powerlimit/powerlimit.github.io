@@ -4484,7 +4484,12 @@ a.button {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.second-screen, .third-screen {
+#timer9851ee392a9fb0ca703e5ded35583f2f {
+  min-width: 538px;
+  height: 88px;
+  text-align: center; }
+
+.first-screen, .third-screen {
   display: none !important; }
 
 .third-screen {
