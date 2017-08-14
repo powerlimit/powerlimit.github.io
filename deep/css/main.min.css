@@ -4484,8 +4484,11 @@ a.button {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.third-screen, .first-screen {
+.second-screen, .third-screen {
   display: none !important; }
+
+.third-screen {
+  text-align: center; }
 
 video {
   width: 100%; }
@@ -4637,30 +4640,13 @@ a.logo img {
     margin: 2rem 0 3rem; }
 
 .main-form {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-
-.form-left {
-  margin-right: 30px; }
+  display: block;
+  padding-bottom: 30px; }
 
 .form-row {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 20px; }
+  display: inline-block;
+  margin: 20px 15px 0px;
+  width: 304px; }
   .form-row span {
     display: inline-block;
     height: 40px;
@@ -4683,7 +4669,8 @@ a.logo img {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    float: left; }
     .form-row span.get {
       margin-right: 0;
       text-align: left; }
@@ -4694,14 +4681,15 @@ a.logo img {
     color: #1a1a1a;
     font-size: 14px;
     border: none;
-    width: 100%;
-    padding: 10px; }
+    padding: 10px 45px 10px 10px;
+    width: 229px; }
     .form-row input.get-token {
       text-align: right;
-      padding-right: 45px;
       background: #fff url("../img/token-logo-small.png") no-repeat 95% center; }
     .form-row input.get-eth {
       text-align: left; }
+    .form-row input.mail-input {
+      width: 100%; }
 
 .flex-elems-container {
   display: -webkit-flex;
@@ -5349,15 +5337,15 @@ dt {
       margin: 0; }
   /**/
   .main-form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    display: inline-block;
+    width: auto;
+    text-align: center; }
     .main-form .button {
       width: 100%; }
     .main-form .form-left {
       margin: 0; }
+    .main-form .form-row {
+      margin: 10px auto; }
   .flex-2-elem {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5456,7 +5444,14 @@ dt {
     display: none; }
   .second-screen h1 {
     margin-top: auto;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .header-content {
+    height: auto;
+    min-height: auto;
+    position: relative;
+    margin-top: 100px; }
+  header {
+    min-height: auto; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -5534,15 +5529,16 @@ dt {
     min-height: auto;
     padding-bottom: 30px; }
   .main-form {
-    display: block; }
+    display: block;
+    text-align: center; }
     .main-form .form-row {
       display: block; }
       .main-form .form-row span {
-        display: block;
-        width: 100%;
-        height: auto;
+        display: inline;
+        height: 40px;
         margin-bottom: 5px;
-        text-align: center; }
+        text-align: center;
+        line-height: 40px; }
       .main-form .form-row input {
         display: block; }
   .flex-elems-container {
@@ -5561,11 +5557,19 @@ dt {
   .sale-terms-text {
     text-align: justify; }
   .footer-wrap {
-    display: block; } }
+    display: block; }
+  #timer9851ee392a9fb0ca703e5ded35583f2f {
+    min-width: auto !important; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /**/ }
+  /**/
+  .form-row {
+    width: 100%; }
+    .form-row input {
+      width: 199px; }
+    .form-row span {
+      width: 56px; } }
 
 /*==========  Mobile First  ==========*/
 /* Custom, iPhone Retina */
