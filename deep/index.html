@@ -69,15 +69,14 @@
 						<span>ETH</span><input type="text" placeholder="1.00000000" class="get-eth" name="ETH" oninput="var v = this.value; var g = v*2; this.form.userTokensGet.value = isNaN(g) ? '' : g.toFixed(8); this.form.sendVal.value = v; this.form.recVal.value = g.toFixed(8);" >
 					</div>
 					<div class="form-row">
-						<input type="text" name="form_subject" placeholder="Your contact mail">
+						<input type="text" name="form_subject" placeholder="Your contact mail" id="b1">
 					</div>
 				</div>
 				<div class="form-right">
-					<div class="form-row">
-						<span>GET</span><input type="text" disabled='disabled' placeholder="10 000.00" class="get-token" name="userTokensGet" >
+					<div class="form-row" id="b2">
+						<span>GET</span><input type="text" readonly="readonly" placeholder="10 000.00" class="get-token" name="userTokensGet"  >
 					</div>
-					<div class="form-row">
-						
+					<div class="form-row" id="b3">
 						<button class="button">Send</button>
 					</div>
 				</div>
@@ -440,7 +439,15 @@
 	
 	
 	<!-- <script type="text/javascript">
-		if (screen.width > 768) document.write ('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js" ></sc' + 'ript>');
+		if (screen.width < 768) {
+			var b1 = document.getElementById("b1");
+		    var b2 = document.getElementById("b2");
+		    var b3 = document.getElementById("b3");
+		    b1.style.marginTop = b2.offsetHeight + "px";
+		    b2.style.marginTop = -(b1.offsetHeight + b2.offsetHeight ) + "px";
+		    b2.style.marginTop = 35 + "px";
+		}
+			/*document.write ('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js" ></sc' + 'ript>');*/
 	</script> -->
 
 	

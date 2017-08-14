@@ -4698,9 +4698,8 @@ a.logo img {
     padding: 10px; }
     .form-row input.get-token {
       text-align: right;
-      padding-right: 40px;
-      background: #fff url("../img/token-logo-small.png") no-repeat 95% center;
-      background-size: 24px; }
+      padding-right: 45px;
+      background: #fff url("../img/token-logo-small.png") no-repeat 95% center; }
     .form-row input.get-eth {
       text-align: left; }
 
@@ -5503,8 +5502,10 @@ dt {
       text-align: center;
       padding: 10px; }
   .flex-2-elem .flex-elem.team-elem img {
-    display: inline-block;
-    width: auto; }
+    display: block;
+    width: 280px;
+    height: auto;
+    margin: 0 auto; }
   .flex-2-elem .flex-elem.team-elem {
     margin-bottom: 15px; }
   .main-nav-wrap:after {
@@ -5522,7 +5523,8 @@ dt {
         padding: 10px 0; }
   header {
     display: block;
-    min-height: auto; }
+    min-height: auto;
+    width: 100%; }
   .header-content {
     display: block;
     height: auto;
