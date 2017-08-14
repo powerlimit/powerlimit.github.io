@@ -4699,7 +4699,8 @@ a.logo img {
     .form-row input.get-token {
       text-align: right;
       padding-right: 40px;
-      background: #fff url("../img/token-logo-small.png") no-repeat 95% center; }
+      background: #fff url("../img/token-logo-small.png") no-repeat 95% center;
+      background-size: 24px; }
     .form-row input.get-eth {
       text-align: left; }
 
@@ -5461,6 +5462,8 @@ dt {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   /**/
+  .section {
+    padding: 30px 0; }
   .center-flex {
     display: block;
     text-align: center; }
@@ -5473,33 +5476,37 @@ dt {
     text-align: center; }
   .flex-4-elem .flex-elem {
     width: 100%; }
-  #roadmap .roadmap-container .roadmap-element {
-    padding-left: 50px; }
-    #roadmap .roadmap-container .roadmap-element p.with-dot:before {
-      left: -30px; }
+  #roadmap .roadmap-container {
+    width: auto;
+    display: block; }
+    #roadmap .roadmap-container .roadmap-element {
+      padding-left: 50px;
+      display: block;
+      width: auto; }
+      #roadmap .roadmap-container .roadmap-element p.with-dot:before {
+        left: -30px; }
   .flex-2-elem .flex-elem.elem-flexed {
     margin: 0;
-    width: 100%; }
+    width: auto;
+    display: block;
+    text-align: center; }
   .subscribe input {
     margin-right: 0;
     margin-bottom: 10px; }
   #socials .soc-wrap {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    display: block;
+    text-align: center; }
     #socials .soc-wrap .soc-link {
       margin: 15px;
-      display: block;
-      width: -webkit-calc(100%/3 - 30px);
-      width: calc(100%/3 - 30px);
-      text-align: center; }
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      padding: 10px; }
   .flex-2-elem .flex-elem.team-elem img {
-    width: -webkit-calc(100% - 30px);
-    width: calc(100% - 30px); }
+    display: inline-block;
+    width: auto; }
+  .flex-2-elem .flex-elem.team-elem {
+    margin-bottom: 15px; }
   .main-nav-wrap:after {
     clear: both; }
   .main-nav {
@@ -5535,7 +5542,24 @@ dt {
         margin-bottom: 5px;
         text-align: center; }
       .main-form .form-row input {
-        display: block; } }
+        display: block; }
+  .flex-elems-container {
+    display: block;
+    width: auto; }
+  #section-welcome .flex-2-elem .flex-elem {
+    width: auto; }
+    #section-welcome .flex-2-elem .flex-elem .opa05 {
+      text-align: justify; }
+  .flex-4-elem .flex-elem {
+    display: block;
+    width: auto;
+    text-align: center; }
+  .cryptocurrency-elem .cryptocurrency-elem-text h4::after {
+    display: none; }
+  .sale-terms-text {
+    text-align: justify; }
+  .footer-wrap {
+    display: block; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
