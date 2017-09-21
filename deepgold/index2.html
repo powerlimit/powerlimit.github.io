@@ -49,35 +49,37 @@
 		background-color: #00aa44;
 	}
 }
-
+@keyframes textcolor{
+	0%{
+		color: #00dd72;
+	}
+	50%{
+		color: #00AC69;
+	}
+	100%{
+		color: #00dd72;
+	}
+}
 @keyframes rocket{
 	0%{
-		top: 50px;
-		left: -44px;
+		top: 100px;
+		left: -94px;
 	}
-	30%{
+	25%{
+		top: 0px;
+		left: 6px;
+	}
+	35%{
 		top: 0px;
 		left: 6px;
 	}
 	70%{
-		top: 0px;
-		left: 6px;
+		top: -100px;
+		left: 106px;
 	}
 	100%{
-		top: -50px;
-		left: 56px;
-	}
-	
-}
-@keyframes light{
-	0%{
-		left: -50px;
-	}
-	50%{
-		left: 200px;
-	}
-	100%{
-		left: 200px;
+		top: -100px;
+		left: 106px;
 	}
 }
 
@@ -125,45 +127,34 @@
 	font-size: 20px;
 }
 .main-nav-list li.demo-link:hover a:after{
-	animation: rocket 3s ease-in-out infinite;
+	animation: rocket 5s ease;
 }
 .main-nav-list li.demo-link:hover a span{
 	opacity: 0;
 }
 .main-nav-list li.demo-link a:before{
-	content: '';
-	width: 30px;
-	height: 100px;
-	position: absolute;
-	top: -30px;
-	background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
-	transform: rotate(45deg);
-	left: -50px;
-	animation: light 5s infinite;
-	opacity: .8;
-	}
-.start{
-	display: none;
-}
-@media screen and (max-width: 768px){
-	.start{
-		display: block;
-		width: 110px;
+		content: '';
+		width: 30px;
+		height: 100px;
 		position: absolute;
-		left: 50%;
-		margin-left: -40px;
-		top: 10px;
+		top: -30px;
+		background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+		transform: rotate(45deg);
+		left: -50px;
+		animation: light 5s infinite;
+		opacity: .8;
 	}
-	.main-nav-list li.demo-link.lg-start{
-		display: none;
+@keyframes light{
+	0%{
+		left: -50px;
+	}
+	50%{
+		left: 200px;
+	}
+	100%{
+		left: 200px;
 	}
 }
-@media screen and (max-width: 320px){
-	.form-row input{
-		width: auto;
-	}
-}
-
 
 </style>
 </head>
@@ -179,16 +170,13 @@
 
 				<nav class=" my-menu" id="my-menu">
 					<ul class="main-nav-list" >
-						<li class="lg-start demo-link"><a class="" href="#section-welcome"><span>START</span></a></li>
+						<li class=" demo-link"><a class="menu--link menu--link2 main-menu-link" href="#section-welcome"><span>START</span></a></li>
 						<li><a class="menu--link" target="_blanc" href="whitepaper.pdf">Whitepaper</a></li>
 						<li><a class="menu--link menu--link2 main-menu-link" href="#roadmap">Roadmap</a></li>
 						<li><a class="menu--link menu--link2 main-menu-link" href="#faq">faq</a></li>
 						<li><a class="menu--link  main-menu-link" target="_blanc" href="https://t.me/deepgold">telegram</a></li>
 					</ul>
 				</nav>
-				<ul class="start main-nav-list">
-					<li class=" demo-link"><a class="" href="#section-welcome"><span>START</span></a></li>
-				</ul>
 				<a href="#my-menu" class="hamburger hamburger--emphatic">
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
