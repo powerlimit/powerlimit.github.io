@@ -60,10 +60,37 @@
 		color: #00dd72;
 	}
 }
+@keyframes rocket{
+	0%{
+		top: 100px;
+		left: -94px;
+	}
+	25%{
+		top: 0px;
+		left: 6px;
+	}
+	35%{
+		top: 0px;
+		left: 6px;
+	}
+	70%{
+		top: -100px;
+		left: 106px;
+	}
+	100%{
+		top: -100px;
+		left: 106px;
+	}
+}
 
-
-.main-nav-list li a.demo-link{
-	padding: 5px 30px;
+.main-nav-list li.demo-link{
+	width: 110px;
+	height: 35px;
+	display: inline-block;
+}
+.main-nav-list li.demo-link a{
+	width: 110px;
+	height: 35px;
 	border-radius: 30px;
 	display: inline-block;
 	border: 1px solid transparent;
@@ -72,31 +99,40 @@
 	position: relative;
 	overflow: hidden;
 	animation: contbg 3s infinite alternate;
+	text-align: center;
+	margin: 0;
 }
-.main-nav-list li a.demo-link span{
+.main-nav-list li.demo-link a span{
 	transition: .3s all;
 }
-.main-nav-list li a.demo-link:hover{
+.main-nav-list li.demo-link:hover a{
 	background-color: #00dd72;
+	height: 35px;
+	width: 35px;
+	border-radius: 35px;
+	transition: .5s all;
+	transition-delay: .2s;
+	margin-left: 37.5px;
+	
 }
 
-.main-nav-list li a.demo-link:after{
-	content: "\f04b";
+.main-nav-list li.demo-link a:after{
+	content: "\f135";
 	position: absolute;
 	font-family: 'fontawesome';
-	top: 0px;
+	top: 100px;
 	color: #fff;
 	left: -100px;
 	transition: .3s all ease;
 	font-size: 20px;
 }
-.main-nav-list li a.demo-link:hover:after{
-	left: 45px;
+.main-nav-list li.demo-link:hover a:after{
+	animation: rocket 5s ease;
 }
-.main-nav-list li a.demo-link:hover span{
+.main-nav-list li.demo-link:hover a span{
 	opacity: 0;
 }
-.main-nav-list li a.demo-link:before{
+.main-nav-list li.demo-link a:before{
 		content: '';
 		width: 30px;
 		height: 100px;
@@ -126,13 +162,7 @@
 <body>
 
 <div id="particles-js"></div>
-<!-- <div id="container_button">
-	<div id="hole">
-		<div id="button" onselectstart="return false">
-			DEMO
-		</div>
-	</div>
-</div> -->
+
 	<div class="main-nav-wrap"> 
 		<div class="container">
 			<div class="main-nav">
@@ -140,8 +170,7 @@
 
 				<nav class=" my-menu" id="my-menu">
 					<ul class="main-nav-list" >
-						<li><a class="menu--link menu--link2 main-menu-link demo-link" href="#section-welcome"><span>DEMO</span></a></li>
-						<li><a class="menu--link menu--link2 main-menu-link" href="#section-welcome">About</a></li>
+						<li class=" demo-link"><a class="menu--link menu--link2 main-menu-link" href="#section-welcome"><span>START</span></a></li>
 						<li><a class="menu--link" target="_blanc" href="whitepaper.pdf">Whitepaper</a></li>
 						<li><a class="menu--link menu--link2 main-menu-link" href="#roadmap">Roadmap</a></li>
 						<li><a class="menu--link menu--link2 main-menu-link" href="#faq">faq</a></li>
