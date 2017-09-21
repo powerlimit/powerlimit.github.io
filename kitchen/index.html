@@ -28,88 +28,52 @@
 
 		
 		 .dot{
-			animation: blink 4s linear infinite;
+			animation: infinite;
 		}
-		@keyframes blink{
-			0%{
-				opacity: 1;
-			}
-			50%{
-				opacity: 0;
-			}
-			100%{
-				opacity: 1;
-				
-			}
-		} 
-
+		.shdw{
+			
+		}
+	.call-button:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		box-shadow: 0px 0px 20px rgba(198, 143, 88, .7);
+		border-radius: 5px;
+		animation: shadow 1s infinite alternate;
+		height: 100%;
+		width: 100%;
+		display: block;
+		z-index: 50;
+	}
+	.opn-quest:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		box-shadow: 0px 0px 20px rgba(198, 143, 88, .7);
+		border-radius: 5px;
+		animation: shadow 1s infinite alternate;
+		height: 100%;
+		width: 100%;
+		display: block;
+		z-index: 50;
+	}
+	@keyframes shadow{
+		0%{
+			opacity: 0;
+		}
+		100%{
+			opacity: 1;
+		}
+	}
 		
 
-@keyframes pulsejg1 {
-    0% {
-        transform: scale(.6);
-        opacity: 0;
-    }
 
-    50% {
-        transform: scale(.6);
-        opacity: 0;
-    }
-
-    60% {
-        transform: scale(.9);
-        opacity: .1;
-    }
-
-    70% {
-        transform: scale(1.1);
-        opacity: .25;
-    }
-
-    80% {
-        transform: scale(1.25);
-        opacity: .1;
-    }
-
-    100% {
-        transform: scale(1.4);
-        opacity: 0;
-    }
-}
-
-
-
-@keyframes pulsejg2 {
-    0% {
-        transform: scale(.6);
-        opacity: 0;
-    }
-
-    40% {
-        transform: scale(.8);
-        opacity: .05;
-    }
-
-    50% {
-        transform: scale(1);
-        opacity: .1;
-    }
-
-    60% {
-        transform: scale(1.1);
-        opacity: .3;
-    }
-
-    80% {
-        transform: scale(1.2);
-        opacity: .1;
-    }
-
-    100% {
-        transform: scale(1.3);
-        opacity: 0;
-    }
-}
 
 
 	input[type="checkbox"] + span:before, input[type="radio"] + span:before { /* галка */
@@ -207,7 +171,7 @@
 					<div class="main-text-wrap">
 						<h1 class="h1 wow bounceInRight">Узнайте как будет выглядеть кухня вашей мечты</h1>
 						<p class="main-desc wow bounceInRight">Определитесь со стоимостью. <br>Пройдите тест и станьте на один шаг ближе к мечте. </p>
-						<a href="#" class="button opn-quest wow bounceInRight">Пройти тест<span class="quest">6 вопросов</span></a>
+						<a href="#" class="button opn-quest wow bounceInRight"><span class="shdw"></span>Пройти тест<span class="quest">6 вопросов</span></a>
 					</div>
 				</div>
 			</div>
@@ -220,10 +184,12 @@
 					<h2 class="h2 wow bounceInLeft">
 						Наша мебель это Искусство воплощенное в мебель
 					</h2>
-					<p class="text wow bounceInLeft">
+				</div>
+				<div class="col-lg-6 col-sm-12">
+					<p class="text wow bounceInRight">
 						Наши кухни - это не только дорогие импортные фасады и фурнитура, ведь наши клиенты ждут от нас намного большего. Поэтому мы уделяем большое внимание к мелочам и деталям, заметным только профессионалу. 
 					</p>
-					<p class="text wow bounceInLeft">
+					<p class="text wow bounceInRight">
 						Для нас важно слышать клиента и сделать для него кухню по-настоящему неповторимую, наделить ее характером и душой.Именно поэтому мы производим искусство, воплощенное в мебель. которое вдохновляет на создание кулинарных шедевров.
 					</p>
 				</div>
@@ -270,8 +236,8 @@
 			<div class="sliding-wrap  wow bounceInUp">
 				<div class="sliding-bg"></div>
 				<div class="sliding"></div>
-				<div class="dot dot-left"></div>
-				<div class="dot dot-right"></div>
+				<div class="dot dot-left wow rubberBand"></div>
+				<div class="dot dot-right wow rubberBand"></div>
 				<img class="img-responsive" src="img/21.png" alt="">
 			</div>
 			<div class="img-popups">
@@ -439,12 +405,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<h2 class="h2 wow bounceInLeft">Разработаем дизайн-проект будущей кухни премиум класса</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-5">
 					<p class="text wow bounceInLeft">Запишитесь на замер до окончания таймера и получите эксклюзивный проект на почту</p>
-					
 				</div>
 			</div>
 			<div class="row">
@@ -483,7 +444,6 @@
 						</div>
 						<div class="price-body">
 							<p>Кухня Silver сегмента подходит большинству покупателей. Вы получаете полный набор услуг от Elite Kitchen и кухню высокого стандарта, которую проверяет отдел контроля качества по 200 пунктам. Какой бы ни был ваш бюджет, цель наших дизайнеров и техников сделать кухню которая бы радовала вас но протяжении десятков лет.</p>
-							
 						</div>
 						<img src="img/logo.png" alt="">
 					</div>
