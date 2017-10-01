@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-
+	
 	<meta charset="utf-8">
 
 	<title>powerlimit</title>
@@ -25,10 +25,12 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
-
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
 
 <body>
+	<div id="particles-js"></div>
 	<div id="my-page">
 		<div id="my-header">
 		<header>
@@ -36,7 +38,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-2 col-md-2 col-sm-5 col-xs-5">
-							<a href="#top" class="logo menu--link ">.WebWizard()</a>
+							<a href="#top" class="logo menu--link ">.webWizArt()</a>
 						</div>
 						<div class="hidden-lg hidden-md col-sm-2 col-xs-2">
 							<div class="contact-link">
@@ -46,7 +48,7 @@
 						<div class="col-lg-10 col-md-10 col-sm-5 col-xs-5">
 							<a href="#my-menu" class="hamburger hamburger--emphatic">
 								<span class="hamburger-box">
-							 		<span class="hamburger-inner"></span>
+									<span class="hamburger-inner"></span>
 								</span>
 							</a>
 							
@@ -55,6 +57,7 @@
 									<li><a href="tel:+375447231123">+375 (44) 723 1123</a></li>
 									<li><a class="menu--link main-menu-link" href="#services">услуги</a></li>
 									<li><a class="menu--link main-menu-link" href="#advantages">преимущества</a></li>
+									<li><a class="menu--link main-menu-link" href="#hand">сотрудничество</a></li>
 									<li><a class="menu--link main-menu-link" href="#works">работы</a></li>
 									<li><a class="menu--link main-menu-link" href="#about">обо мне</a></li>
 									<li><a class="menu--link main-menu-link" href="#contacts">контакты</a></li>
@@ -76,16 +79,13 @@
 			</div>
 		</header>
 	</div>
-	<div id="my-content">
 	<div  id="services">
 		<section class="section section-services">
-			<img src="img/design.jpeg" alt="" class="parallaxed parallax-1">
-			<img src="img/figure1.png" alt="" class="parallaxed__top">
 			<div class="section--content">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
-							<div class="section--content__block">
+							<div class="section--content__block w-w-bg">
 								<h2><strong>UX/UI</strong> дизайн</h2>
 								<p>
 									Быстро и качественно сделаю <strong>UX/UI</strong> дизайн для сайта, который будет продавать Ваши товары и услуги лучше любого менеджера, а адаптивная верстка позволит Вашему сайту прекрасно смотреться на любых экранах - от телевизоров до смартфонов.
@@ -96,22 +96,35 @@
 								<a href="#contacts" class="button button-port menu--link">Заказать дизайн</a>
 							</div>
 						</div>
+						<div class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
+							<div class="section--img text-center">
+								<div class="circle">
+									UX
+								</div>
+								<div class="ux-text text-center">
+									UX is everything. Everything is UX
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
+<div id="particles-js"></div>
 		<section class="section section-services">
-			<img src="img/slide1.jpeg" alt="" class="parallaxed parallax-2">
-			<img src="img/figure2.png" alt="" class="parallaxed__top">
 			<div class="section--content">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6 col-lg-offset-6 col-md-offset-6 col-md-6 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
-							<div class="section--content__block">
+						<div class="col-lg-6 col-md-6 col-sm-10 col-md-offset-0 col-sm-offset-1 col-xs-offset-0 col-xs-12">
+							<div class="section--img text-center">
+								<img src="https://modx.com/assets/i/logos/v5/svgs/modx-stacked-black-solid.svg" alt="">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
+							<div class="section--content__block w-w-bg">
 								<h2>Системы управления контентом</h2>
 								<p>
-									Для более удобного редактирования информации сделаю посадку Вашего landing-page или сайта-визитки на CMS <strong>WordPress</strong> а интернет-магазина на CMS <strong>Opencart</strong>.
+									Для более удобного редактирования информации сделаю посадку Вашего landing-page или сайта-визитки на CMS <strong>WordPress</strong> или <strong>MODX</strong> а интернет-магазина на CMS <strong>Opencart</strong>.
 								</p>
 								<p>
 									Научу пользоваться системой, добавлять и удалять контент, вносить правки в дизайн и многое другое.
@@ -125,18 +138,21 @@
 		</section>
 
 		<section class="section section-services">
-			<img src="img/support.jpg" alt="" class="parallaxed parallax-3">
-			<img src="img/figure3.png" alt="" class="parallaxed__top">
 			<div class="section--content">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
-							<div class="section--content__block">
+							<div class="section--content__block w-w-bg">
 								<h2>Техническая поддержка</h2>
 								<p>
 									После сдачи проекта я помогаю Вам показать свой сайт миру - закажу домен, размещу сайт на хостинге. Кроме того, все мои клиенты получают постоянную техническую поддержку. <strong>Я нацелен на долгосрочное сотрудничество</strong>.
 								</p>
 								<a href="#contacts" class="button button-port menu--link">Задать вопрос</a>
+							</div>
+						</div>
+						<div class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
+							<div class="section--img text-center">
+								<img src="img/phone-png-1.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -185,191 +201,168 @@
 				</div>
 			</div>
 		</section>
-		<section id="works" class="section section--works">
-			<div class="work-item">
-				<img src="img/sspromotion.jpg" alt="">
-				<div class="links">
-						<span id='open-portfolio-1' class="button">подробнее</span>
-				</div>
-			</div>
 
-			<div class="work-item">
-				<img src="img/impala.jpg" alt="">
-				<div class="links">
-						<span id='open-portfolio-2' class="button">подробнее</span>
-				</div>
-				
-			</div>
-			<div class="work-item">
-				<img src="img/smeta.jpg" alt="">
-				<div class="links">
-						<span id='open-portfolio-3' class="button">подробнее</span>
-				</div>
-			</div>
-			<div class="work-item">
-				<img src="img/artico.jpg" alt="">
-				<div class="links">
-						<span id='open-portfolio-4' class="button">подробнее</span>
-				</div>
-			</div>
-			<div class="work-item">
-				<img src="img/infobus.jpg" alt="">
-				<div class="links">
-						<span id='open-portfolio-5' class="button">подробнее</span>
-				</div>
-			</div>
-			
-			<div class="work-item">
-				<img src="img/busSystem.jpg" alt="">
-				<div class="links">
-						<span id='open-portfolio-8' class="button">подробнее</span>
-				</div>
-			</div>
-			<div id="portfolio-1" class="box-hide portfolio-popup">
-				<div class="fon-black animated">
-					<div class="window-wrapper animated ">
-						<div class="close-window">
-							<i class="fa fa-close"></i>
-						</div>
-						<div class="img-wrap">
-							<img src="img/sspromotion.jpg" alt="">
-						</div>
-						<div class="cont-wrap">
-							<h3>SSpromotion.ru</h3>
-							<p class="technologies">
-								WordPress / HTML5 / CSS3 / JavaScript / JQuery
-							</p>
-							<p>
-								Сайт моего партнера. Выполнен на CMS WordPress. Компания, занимающаяся продвижением сайтов и рекламой в Google и Яндекс.
-							</p>
-							<a href="#contacts" class="button button-port">Заказать сайт</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="portfolio-2" class="box-hide portfolio-popup">
-				<div class="fon-black animated">
-					<div class="window-wrapper animated ">
-						<div class="close-window">
-							<i class="fa fa-close"></i>
-						</div>
-						<div class="img-wrap">
-							<img src="img/impala.jpg" alt="">
-						</div>
-						<div class="cont-wrap">
-							<h3>Impala</h3>
-							<p class="technologies">
-								HTML5 / CSS3 / JavaScript / JQuery
-							</p>
-							<p>
-								Один из сайтов компании занимающейся перевозками по США. Сайт выполнен в форме Landing-page.
-							</p>
-							<a href="#contacts" class="button button-port">Заказать сайт</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="portfolio-3" class="box-hide portfolio-popup">
-				<div class="fon-black animated">
-					<div class="window-wrapper animated ">
-						<div class="close-window">
-							<i class="fa fa-close"></i>
-						</div>
-						<div class="img-wrap">
-							<img src="img/smeta.jpg" alt="">
-						</div>
-						<div class="cont-wrap">
-							<h3>smeta-vrn.ru</h3>
-							<p class="technologies">
-								HTML5 / CSS3 / JavaScript / JQuery
-							</p>
-							<p>
-								Сайт часного инженера-сметчика. Разработан совместно с компанией SSpromotion.
-							</p>
-							<a href="#contacts" class="button button-port">Заказать сайт</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="portfolio-4" class="box-hide portfolio-popup">
-				<div class="fon-black animated">
-					<div class="window-wrapper animated ">
-						<div class="close-window">
-							<i class="fa fa-close"></i>
-						</div>
-						<div class="img-wrap">
-							<img src="img/artico.jpg" alt="">
-						</div>
-						<div class="cont-wrap">
-							<h3>artico-stroi.ru</h3>
-							<p class="technologies">
-								WordPress / HTML5 / CSS3 / JavaScript / JQuery / PHP
-							</p>
-							<p>
-								Сайт аренды строительной техники в Москве. Выполнен в виде магазина на CMS WordPress.
-							</p>
-							<a href="#contacts" class="button button-port">Заказать сайт</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="portfolio-5" class="box-hide portfolio-popup">
-				<div class="fon-black animated">
-					<div class="window-wrapper animated ">
-						<div class="close-window">
-							<i class="fa fa-close"></i>
-						</div>
-						<div class="img-wrap">
-							<img src="img/infobus.jpg" alt="">
-						</div>
-						<div class="cont-wrap">
-							<h3>Infobus</h3>
-							<p class="technologies">
-								HTML5 / CSS3 / JavaScript / JQuery / PHP / MySQL
-							</p>
-							<p>
-								Сайт Онлайн-продажи автобусных билетов в Украину, Европу и СНГ. В данный момент находится на этапе програмирования.
-							</p>
-							<a href="#contacts" class="button button-port">Заказать сайт</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			
-			<div id="portfolio-8" class="box-hide portfolio-popup">
-				<div class="fon-black animated">
-					<div class="window-wrapper animated ">
-						<div class="close-window">
-							<i class="fa fa-close"></i>
-						</div>
-						<div class="img-wrap">
-							<img src="img/busSystem.jpg" alt="">
-						</div>
-						<div class="cont-wrap">
-							<h3>BusSystem</h3>
-							<p class="technologies">
-								HTML5 / CSS3 / JavaScript / JQuery / PHP / MySQL
-							</p>
-							<p>
-								Еще один сайт онлайн-продажи автобусных билетов. Заказчик передыдушего сайта остался доволен и заказал еще один сайт. Приятно, когда люди возвращаются.
-							</p>
-							<a href="#contacts" class="button button-port">Заказать сайт</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<div id="about">
-			<section class="section section--about">
-				<img src="img/design.jpeg" alt="" class="parallaxed">
-				<img src="img/figure1.png" alt="" class="parallaxed__top">
+		<section class="section section--about" id="hand">
 				<div class="section--content">
 					<div class="container">
-						<div class="row">
-							<div class="col-lg-6 col-lg-offset-0 col-md-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
-								<div class="section--content__block">
-									<h2><h2>немного обо мне</h2></h2>
+						<div class="row" style="display: flex; align-items: center">
+							<div class="col-lg-6">
+								<div class="section--img text-center">
+									<i class="fa fa-handshake-o" style="font-size: 300px"></i>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="section--content__block w-w-bg">
+									<h2>Сотрудничество</h2>
+									<h4>Веб-студиям</h4>
+									<p>
+										Предлагаю свои услуги в веб разработке, создании сайтов, разработке дизайна, а так же консалтинг в сфере веб-технологий.
+									</p>
+									<h4>Фрилансерам</h4>
+									<p>
+										Если Вы имеете большую базу клиентов, но у Вас не достаточно времени для решения всех вопросов, доверьте мне решение задач по веб-разработке. Результат Вас приятно удивит. 
+									</p>
+									<h4>Всем желающим иметь сайт</h4>
+									<p>
+										Если Вы создаете стартап, рекламируете свой товар в сети либо просто хотите завести себе сайт или блог, я всегда открыт для предложений. 
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		
+		<section id="works" class="section section--works">
+		
+		<div class="owl-carousel">
+			<div class="work-item">
+				<div class="img-wrap">
+					<img src="img/port4.jpg" alt="">
+				</div>
+				<div class="cont-wrap">
+					<div class="cont-head">
+						<h3><a href="https://www.deep.gold/" target="_blanc">Deep Gold Limited</a></h3>
+						<p class="technologies">
+							HTML5 / CSS3 / JavaScript / JQuery
+						</p>
+					</div>
+					<div class="cont-body">
+						<p>
+							Сайт IT компании которая занимается разработкой разнообразных програмных продуктов а так же созданием виртуального мира. На сайте присутствует калькулятор, форма обратной связи, множество скриптов для организации информации на сайте, CSS анимация.
+						</p>
+						<a href="#contacts" class="button button-port menu--link">Заказать сайт</a>
+					</div>
+				</div>
+			</div>
+			<div class="work-item">
+				<div class="img-wrap">
+					<img src="img/port1.jpg" alt="">
+				</div>
+				<div class="cont-wrap">
+					<div class="cont-head">
+						<h3>SSpromotion.ru</h3>
+						<p class="technologies">
+							WordPress / HTML5 / CSS3 / JavaScript / JQuery
+						</p>
+					</div>
+					<div class="cont-body">
+						<p>
+							Сайт моего партнера. Этот сайт я выполнил на CMS WordPress. Компания занимается продвижением сайтов и рекламой в Google и Яндекс.
+						</p>
+						<a href="#contacts" class="button button-port menu--link">Заказать сайт</a>
+					</div>
+				</div>
+			</div>
+			<div class="work-item">
+				<div class="img-wrap">
+					<img src="img/port2.jpg" alt="">
+				</div>
+				<div class="cont-wrap">
+					<div class="cont-head">
+						<h3><a href="https://binary-monster.com/" target="_blanc">Binary-monster</a></h3>
+						<p class="technologies">
+							Java / HTML5 / CSS3 / JavaScript / JQuery
+						</p>
+					</div>
+					<div class="cont-body">
+						<p>
+							Сайт компании занимающейся торговлей бинарными опционами. Бэкенд сайта написан на Java. Никакие CMS при разработке сайта не использовались.
+						</p>
+						<a href="#contacts" class="button button-port menu--link">Заказать сайт</a>
+					</div>
+				</div>
+			</div>
+			<div class="work-item">
+				<div class="img-wrap">
+					<img src="img/port3.jpg" alt="">
+				</div>
+				<div class="cont-wrap">
+					<div class="cont-head">
+						<h3><a href="http://new-kitchen.ru/" target="_blanc">New kitchen</a></h3>
+						<p class="technologies">
+							MODX / HTML5 / CSS3 / JavaScript / JQuery
+						</p>
+					</div>
+					<div class="cont-body">
+						<p>
+							Сайт мебельной компании, которая специализируется на производстве кухонь. Сайт работает на CMS MODX. На сайте присутствуют элементы CSS анимации, множество JavaScript и JQuery скриптов, форма обратной связи.
+						</p>
+						<a href="#contacts" class="button button-port menu--link">Заказать сайт</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="work-item">
+				<div class="img-wrap">
+					<img src="img/port5.jpg" alt="">
+				</div>
+				<div class="cont-wrap">
+					<div class="cont-head">
+						<h3>Надеждовский детский сад</h3>
+						<p class="technologies">
+							MODX / HTML5 / CSS3 / JavaScript / JQuery
+						</p>
+					</div>
+					<div class="cont-body">
+						<p>
+							Яркий и веселый сайт для чудесного детского сада "Солнышко". Сайт работает на MODX. На сайте есть галереи, новости и многое другое.
+						</p>
+						<a href="#contacts" class="button button-port menu--link">Заказать сайт</a>
+					</div>
+				</div>
+			</div>
+			<div class="work-item">
+				<div class="img-wrap">
+					<img src="img/port6.jpg" alt="">
+				</div>
+				<div class="cont-wrap">
+					<div class="cont-head">
+						<h3><a href="http://artico-stroi.ru/" target="_blanc">Аренда спецтехники</a></h3>
+						<p class="technologies">
+							WordPress / HTML5 / CSS3 / JavaScript / JQuery
+						</p>
+					</div>
+					<div class="cont-body">
+						<p>
+							Сайт организации которая сдает в аренду спецтехнику в Москве. Сайт работает на WordPress с использованием плагина WooCommerce.
+						</p>
+						<a href="#contacts" class="button button-port menu--link">Заказать сайт</a>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+			
+		</section>
+		<section class="section section--about black-about" id="about">
+			<div class="section--content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+							<div class="section--content__block w-w-bg">
+								<div class="section--about-cont">
+									<h2>немного обо мне</h2>
 									<p>
 										Я <strong>фрилансер веб-разработчик</strong>. С веб разработкой столкнулся впервые в 2012 году. С тех пор это превратилось в мое хобби.
 									</p>
@@ -382,46 +375,19 @@
 								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section section--about ">
-				<img src="img/slide1.jpeg" alt="" class="parallaxed img_l">
-				<img src="img/figure2.png" alt="" class="parallaxed__top">
-				<div class="section--content">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6 col-lg-offset-6 col-md-offset-6 col-md-6 col-sm-10 col-sm-offset-1 col-xs-offset-0 col-xs-12">
-								<div class="section--content__block">
-									<h2>Сотрудничество</h2>
-									<div class="section--about-cont">
-										<h4>Веб-студиям</h4>
-										<p>
-											Предлагаю свои услуги в веб разработке, создании сайтов, разработке дизайна, а так же консалтинг в сфере веб-технологий.
-										</p>
-										<h4>Фрилансерам</h4>
-										<p>
-											Если Вы имеете большую базу клиентов, но у Вас не достаточно времени для решения всех вопросов, доверьте мне решение задач по веб-разработке. Результат Вас приятно удивит. 
-										</p>
-										<h4>Всем желающим иметь сайт</h4>
-										<p>
-											Если Вы создаете стартап, рекламируете свой товар в сети либо просто хотите завести себе сайт или блог, я всегда открыт для предложений. 
-										</p>
-									</div>
-								</div>
-							</div>
+						<div class="col-lg-6 col-md-6 col-sm-10 col-xs-12">
+							<video src="vid.mp4" autoplay="autoplay" loop="loop"></video>
 						</div>
 					</div>
 				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 
 		<section class="section section--contacts" id="contacts">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<div class="contact-info">
+						<div class="contact-info w-w-bg">
 							<h3>Свяжитесь со мной одним из способов</h3>
 							<p class="title">
 								Адрес
@@ -442,7 +408,7 @@
 							<ul>
 								<li><a target="_blank" href="https://vk.com/powerlimit" class="vk" ><i class="fa fa-vk"></i></a></li>
 								<li><a target="_blank" href="https://www.facebook.com/profile.php?id=100010830400849&ref=bookmarks" class="fb" ><i class="fa fa-facebook"></i></a></li>
-								<li><a target="_blank" href="https://www.linkedin.com/in/ivan-bondar-009456a7/" class="in" ><i class="fa fa-linkedin"></i></a></li>
+								<li><a target="_blank" href="https://t.me/webwizart" class="in" ><i class="fa fa-telegram"></i></a></li>
 								<li><a target="_blank" href="https://www.pinterest.com/ivanbondar133/" class="pi" ><i class="fa fa-pinterest"></i></a></li>
 								<li><a href="mailto: ivanbondar133@gmail.com" class="go" ><i class="fa fa-google-plus"></i></a></li>
 								<li><a target="_blank" href="https://github.com/powerlimit" class="gh" ><i class="fa fa-github"></i></a></li>
@@ -453,46 +419,41 @@
 						<div class="form">
 							<h3>Оставить заявку</h3>
 							<form>
-								<input type="text" name="Имя" placeholder="Ваше имя">
-								<input type="text" name="Email" placeholder="Ваш email">
-								<input type="text" name="Телефон" placeholder="Ваш телефон">
-								<!-- <label><input type="checkbox" id="terms"> Я согласен с <a href="privacypolicy.htm">условиями использования</a></label> -->
-								<button class="button" id="send">отправить</button>
+								<input type="text" name="name" placeholder="Ваше имя">
+								<input type="text" name="email" placeholder="Ваш email">
+								<input type="text" name="phone" placeholder="Ваш телефон">
+								<span class="policy">Оставляя заявку Вы соглашаетесь с <a href="privacypolicy.htm" target="_blanc">политикой конфиденциальности</a></span>
+								<button class="button" id="send" type="submit">отправить</button>
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<div id="contact-window" class="box-hide">
-			<div class="fon-black animated">
-				<div class="window-wrapper animated ">
-					<div class="close-window">
-						<i class="fa fa-close"></i>
-					</div>
-					<input type="text">
-					Первое модальное окно 
-				</div>
-			</div>
-		</div>
-	</div>
-	
 	<div id="my-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-xs-12">
-					<a href="#top" class="logo menu--link ">.WebWizard()</a>
+					<a href="#top" class="logo menu--link ">.webWizArt()</a>
 				</div>
 				<div class="col-sm-6 col-xs-12 tr">
-					<a target="_blanc" class="terms" href="privacypolicy.htm">Условия использования</a>
+					<a target="_blanc" class="terms" href="privacypolicy.htm">Политика конфиденциальности</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	</div>
 	
+	<div class="thanks">
+		<div class="black-fon">
+			<div class="win">
+				<h3>Спасибо за заявку</h3>
+				<p>Я свяжусь с Вами в ближайшее время</p>
+				<button class="button button-port close-thx">Хорошо</button>
+			</div>
+		</div>
+	</div>
 	
-	<link rel="stylesheet" href="css/main.min.css">
 
 	<script src="js/scripts.min.js"></script>
 
